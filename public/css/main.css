@@ -44,6 +44,22 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none;
 }
 
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
+.logo-tim {
+    width: 103px;
+    height: 40px;
+    display: inline-block;
+    margin: -15px 35px 5px;
+}
+
 .navbar-toggle {
   background-color: #000;
 }
@@ -545,12 +561,12 @@ ul.sub-menu {
 }
 
 .footer-bottom {
-  background: #D6D6D0;
+  background: #004990;
   padding-top: 10px;
 }
 
 .footer-bottom p {
-  color: #363432;
+  color: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   margin-left: 15px;
