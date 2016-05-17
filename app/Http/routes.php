@@ -12,5 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    $taxon = App\Taxon::find(1);
+    $devices = null;
+    if(isset($taxon)){
+      $devices = $taxon->devices();
+    }
+    return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices]);
 });
+
+Route::resource('taxon', 'TaxonController', ['only' => [
+    'index', 'show'
+]]);
+
+Route::resource('device', 'DeviceController', ['only' => [
+    'index', 'show'
+]]);
+
+Route::resource('service', 'ServiceController', ['only' => [
+    'index', 'show'
+]]);

@@ -11,7 +11,43 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Device::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->safeEmail,
+        'password' => bcrypt(str_random(10)),
+        'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Taxon::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->safeEmail,
+        'password' => bcrypt(str_random(10)),
+        'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Service::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->safeEmail,
+        'password' => bcrypt(str_random(10)),
+        'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Property::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->safeEmail,
+        'password' => bcrypt(str_random(10)),
+        'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Faq::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
