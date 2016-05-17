@@ -11,6 +11,8 @@ class Attachment extends Model implements StaplerableInterface
 {
     use EloquentTrait;
 
+    protected $fillable = ['image'];
+
     public function __construct(array $attributes = array()) {
       $this->hasAttachedFile('image', [
           'styles' => [
