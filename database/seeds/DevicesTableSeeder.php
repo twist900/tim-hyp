@@ -40,8 +40,9 @@ class DevicesTableSeeder extends Seeder
           ]
         );
         $device1->save();
+        $smartphoneTaxon->devices()->save($device1);
         $device1Image = App\Attachment::create(['image' => 'https://img.tim.it/sdr/LG_G5_titan_01_1.jpg']);
-        $device1->images()->save($device1Image);
+        $device1->attachments()->save($device1Image);
 
 
 
