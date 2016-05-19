@@ -27,7 +27,8 @@ class DeviceController extends Controller
      */
     public function show($id)
     {
-        //
+        $taxons = Taxon::whereIsRoot()->get();
+
     }
 
 }

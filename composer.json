@@ -9,7 +9,8 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "codesleeve/laravel-stapler": "1.0.*",
-        "kalnoy/nestedset": "^4.1"
+        "kalnoy/nestedset": "^4.1",
+        "laravelcollective/html": "^5.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

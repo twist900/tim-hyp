@@ -27,7 +27,7 @@ class TaxonController extends Controller
      */
     public function show($id)
     {
-        $taxon = Taxon.find($id);
+        $taxon = \App\Taxon::find($id);
         if($taxon){
             $devices = $taxon->devices();
         }

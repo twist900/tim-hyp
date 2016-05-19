@@ -19,36 +19,18 @@
             </div>
           </div>
           <div class="mainmenu pull-left">
-
-
-
             <ul class="nav navbar-nav collapse navbar-collapse">
+              @foreach ( App\Taxon::whereIsRoot()->get() as $rootTaxon)
+                <li class="dropdown"><a href="#">{{ $rootTaxon->name }}<i class="fa fa-angle-down"></i></a>
+                    <ul role="menu" class="sub-menu">
+                      @foreach( $rootTaxon->descendants as  $childTaxon )
 
-              <li class="dropdown"><a href="#">Prodotti<i class="fa fa-angle-down"></i></a>
-                  <ul role="menu" class="sub-menu">
-                    <li><a href="product-details.html">Smartphone e Telefoni</a></li>
-                    <li><a href="checkout.html">Tablet e Computer</a></li>
-                    <li><a href="cart.html">Modem e Networking</a></li>
-                    <li><a href="login.html">TV e Smart Living </a></li>
-                    <li><a href="login.html">Outlet</a></li>
-                  </ul>
-              </li>
-              <li class="dropdown"><a href="#">Smart Life<i class="fa fa-angle-down"></i></a>
-                  <ul role="menu" class="sub-menu">
-                    <li><a href="shop.html">TV & Entertainment</a></li>
-                    <li><a href="product-details.html">Salute e benessere</a></li>
-                    <li><a href="checkout.html">Casa e Famiglia</a></li>
-                    <li><a href="cart.html">Servizi alla persona</a></li>
-                  </ul>
-              </li>
-              <li class="dropdown"><a href="#">Assistenza<i class="fa fa-angle-down"></i></a>
-                  <ul role="menu" class="sub-menu">
-                    <li><a href="shop.html">Gestione linea e servizi</a></li>
-                    <li><a href="product-details.html">Controlla costi e pagamenti</a></li>
-                    <li><a href="checkout.html">Supporto tecnico e configurazione</a></li>
-                    <li><a href="cart.html">Smart Life</a></li>
-                  </ul>
-              </li>
+                       {!! Html::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, [])
+                        !!}
+                      @endforeach
+                    </ul>
+                </li>
+              @endforeach
             </ul>
           </div>
         </div>

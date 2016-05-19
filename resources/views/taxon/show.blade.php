@@ -1,5 +1,6 @@
 @extends('layouts.application')
 
+
 @section('content')
   <section id="slider"><!--slider-->
     <div class="container">
