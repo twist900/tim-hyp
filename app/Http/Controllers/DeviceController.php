@@ -27,8 +27,10 @@ class DeviceController extends Controller
      */
     public function show($id)
     {
-        $taxons = Taxon::whereIsRoot()->get();
-
+        // $taxons = Taxon::whereIsRoot()->get();
+        $taxon = Taxon::find($id);
+        $devices = $taxon->devices();
+        return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices]);
     }
 
 }

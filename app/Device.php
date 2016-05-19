@@ -10,7 +10,7 @@ class Device extends Model
   /**
       * Get all of the comment's likes.
       */
-     public function images()
+     public function attachments()
      {
         return $this->morphMany('App\Attachment', 'viewable');
      }
