@@ -21,12 +21,13 @@
           <div class="mainmenu pull-left">
             <ul class="nav navbar-nav collapse navbar-collapse">
               @foreach ( App\Taxon::whereIsRoot()->get() as $rootTaxon)
-                <li class="dropdown"><a href="#">{{ $rootTaxon->name }}<i class="fa fa-angle-down"></i></a>
+                <li class="dropdown"><a href="#">{!! $rootTaxon->name !!}<i class="fa fa-angle-down"></i></a>
                     <ul role="menu" class="sub-menu">
                       @foreach( $rootTaxon->descendants as  $childTaxon )
-
-                       {!! Html::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, [])
+                       <li>
+                          {!! Html::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, [])
                         !!}
+                        </li>
                       @endforeach
                     </ul>
                 </li>
