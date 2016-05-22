@@ -17,7 +17,7 @@ class Attachment extends Model implements StaplerableInterface
       $this->hasAttachedFile('image', [
           'styles' => [
               'large' => '640x640',
-              'medium' => '400x400',
+              'medium' => '268x249',
               'thumb' => '180x180',
               'tiny' => '75x75',
           ]

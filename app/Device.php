@@ -25,4 +25,8 @@ class Device extends Model
         return $this->belongsToMany('App\Taxon');
      }
 
+     public function company()
+     {
+        return $this->belongsTo('App\Company');
+     }
 }

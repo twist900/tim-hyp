@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
 
       DB::table('attachments')->truncate();
       DB::table('device_taxon')->truncate();
+      DB::table('company_taxon')->truncate();
+      DB::table('device_property')->truncate();
+
 
       $this->call(TaxonsTableSeeder::class);
       $this->call(CompaniesTableSeeder::class);

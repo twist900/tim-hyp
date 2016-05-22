@@ -4,6 +4,13 @@ use Illuminate\Database\Seeder;
 
 class DevicesTableSeeder extends Seeder
 {
+
+    private $client = null;
+
+    public function __construct()
+    {
+      $this->client = new GuzzleHttp\Client(['base_uri' => 'https://api.bestbuy.com/']);
+    }
     /**
      * Run the database seeds.
      *
@@ -14,37 +21,62 @@ class DevicesTableSeeder extends Seeder
 
         DB::table('devices')->truncate();
 
-        $devicesRoot = App\Taxon::where('name', 'Prodotti')
-          ->where('parent_id', null)->first();
-
-        $smartphoneTaxon = $devicesRoot->descendants()
-          ->where('name', 'Smartphone e Telefoni')->first();
-
-        $tabletTaxon = $devicesRoot->descendants()
-          ->where('name', 'Tablet e Computer')->first();
-
-        $modemTaxon = $devicesRoot->descendants()
-          ->where('name', 'Modem e Networking')->first();
-
-        $tvTaxon = $devicesRoot->descendants()
-          ->where('name', 'TV e Smart Living')->first();
-
-        $outletTaxon = $devicesRoot->descendants()
-          ->where('name', 'Outlet')->first();
-
-        $LGCompany = App\Company::where('name', 'LG')->first();
-        $device1 = new App\Device(
-          [ 'name' => 'G5', 'company_id' => $LGCompany->id,
-            'description' => "Il nuovo LG G5 è uno nuovo tipo di smartphone che supera tutti i limiti, con un design modulare completamete in metallo che rivoluziona i canoni di design. Espandi le funzioni, interagisci con gli innovativi LG Friends e prova un'esperienza smartphone realmente innovativa. La rivoluzione di G5 continua con la doppia fotocamera grandangolare, che cattura più di quanto i tuoi occhi riescano a vedere. Anche sotto il sole, perché il nuovo display IPS Quantum è più ricco, luminoso e colorato anche sotto la luce diretta del sole. E ti mostra sempre le notifiche principali anche quando non è attivo. Nuovo LG G5: quello che non ti aspetti, nel palmo della tua mano.", 'cost' => '699,90'
-
-          ]
-        );
-        $device1->save();
-        $smartphoneTaxon->devices()->save($device1);
-        $device1Image = App\Attachment::create(['image' => 'https://img.tim.it/sdr/LG_G5_titan_01_1.jpg']);
-        $device1->attachments()->save($device1Image);
+        $this->createDevicesForTaxon('All%20Cell%20Phones%20with%20Plans', 'Smartphone e Telefoni');
+        $this->createDevicesForTaxon('All%20Tablets', 'Tablet e Computer');
+        $this->createDevicesForTaxon('All%20Laptops', 'Tablet e Computer');
+        $this->createDevicesForTaxon('Wireless%20Routers', 'Modem e Networking');
+        $this->createDevicesForTaxon('4K%20Ultra%20HD%20TVs', 'TV e Smart Living');
+        $this->createDevicesForTaxon('Curved%20TVs', 'TV e Smart Living');
+        $this->createDevicesForTaxon('All%20Laptops', 'Outlet');
 
 
+    }
 
+    private function createDevicesForTaxon($bestBuyTaxon, $dbTaxon)
+    {
+
+      $dbTaxonModel = App\Taxon::where('name', $dbTaxon)->first();
+
+      foreach($dbTaxonModel->companies as $company){
+        $response = $this->client->request('GET', "/v1/products(categoryPath.name=$bestBuyTaxon&manufacturer={$company->name})?format=json&show=name,regularPrice,longDescription,details,image,angleImage,backViewImage,leftViewImage,rightViewImage&apiKey=" . env('BEST_BUY_API_KEY', 'You need a key'));
+        $jsonResponse = json_decode($response->getBody());
+        foreach( $jsonResponse->products as $product){
+          $device = new App\Device([ 'name' => $product->name, 'cost' => $product->regularPrice,
+            'description' => $product->longDescription]);
+          $device->save();
+          $dbTaxonModel->devices()->save($device);
+          $company->devices()->save($device);
+          foreach( $product->details as $detail){
+            $detailModel =  App\Property::firstOrCreate(['name' => $detail->name]);
+            $detailModel->devices()->save($device, ['value' => $detail->value ]);
+          }
+
+          if( !empty($product->image)){
+            $deviceImage = App\Attachment::create(['image' => $product->image]);
+            $device->attachments()->save($deviceImage);
+          }
+
+          if( !empty($product->angleImage)){
+            $deviceImage = App\Attachment::create(['image' => $product->angleImage]);
+            $device->attachments()->save($deviceImage);
+          }
+
+          if( !empty($product->backViewImage)){
+            $deviceImage = App\Attachment::create(['image' => $product->backViewImage]);
+            $device->attachments()->save($deviceImage);
+          }
+
+          if( !empty($product->leftViewImage)){
+            $deviceImage = App\Attachment::create(['image' => $product->leftViewImage]);
+            $device->attachments()->save($deviceImage);
+          }
+
+          if( !empty($product->rightViewImage)){
+            $deviceImage = App\Attachment::create(['image' => $product->rightViewImage]);
+            $device->attachments()->save($deviceImage);
+          }
+
+        }
+      }
     }
 }

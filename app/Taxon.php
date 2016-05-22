@@ -13,4 +13,9 @@ class Taxon extends Model
      return $this->belongsToMany('App\Device');
   }
 
+  public function companies()
+  {
+     return $this->belongsToMany('App\Company');
+  }
+
 }
