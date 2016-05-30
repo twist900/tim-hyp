@@ -35,12 +35,11 @@ class TaxonController extends Controller
         if($taxon){ 
             if(isset($compId)){
                 $devices = $taxon->devices()->where('company_id', $compId)->get();
-                return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices]);
             }
             else{
                 $devices = $taxon->devices()->get();
-                return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices]);
             }
+            return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices]);
         }
     }
 
