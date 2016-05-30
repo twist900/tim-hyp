@@ -22,14 +22,6 @@ class TaxonController extends Controller
 
     }
 
-    public function debug_to_console($data) {
-        if(is_array($data) || is_object($data))
-        {
-            echo("<script>console.log('PHP: ".json_encode($data)."');</script>");
-        } else {
-            echo("<script>console.log('PHP: ".$data."');</script>");
-        }
-    }
     /**
      * Display the specified resource.
      *
@@ -40,10 +32,8 @@ class TaxonController extends Controller
     {
         $taxon = Taxon::find($id);
         $compId = Input::get('company');
-        $this->debug_to_console($compId);
         if(isset($compId)){
             if($taxon){
-                $this->debug_to_console('ENTRATO');
                 $devices = $taxon->devices()->where('company_id', $compId)->get();
                 return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices]);
             }
