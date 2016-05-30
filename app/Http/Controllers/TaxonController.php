@@ -39,8 +39,9 @@ class TaxonController extends Controller
             else{
                 $devices = $taxon->devices()->get();
             }
-            return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices]);
         }
+        return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices]);
+
     }
 
   }
