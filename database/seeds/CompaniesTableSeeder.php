@@ -37,7 +37,7 @@ class CompaniesTableSeeder extends Seeder
       $jsonResponse = json_decode($response->getBody());
       $manufacturerArray = [];
       foreach( $jsonResponse->facets->manufacturer as $key => $value){
-        if( $key != 'insignia™' ){
+        if( $key != 'insignia™' && $key != 'at&t' ){
           $manufacturerArray[] =  App\Company::firstOrNew(['name' => $key]);
         }
       }
