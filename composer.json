@@ -11,7 +11,8 @@
         "codesleeve/laravel-stapler": "1.0.*",
         "kalnoy/nestedset": "^4.1",
         "laravelcollective/html": "^5.2",
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2",
+        "ext-gd": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
