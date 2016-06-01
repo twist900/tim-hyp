@@ -4,7 +4,7 @@
 <meta name="author" content="">
 <title>Home | E-Shopper</title>
 
-@if (Request::isSecure())
+@if (Request::secure())
   {{$secure = true}}
 @else
   {{$secure = false}}
