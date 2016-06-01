@@ -184,11 +184,13 @@
               <h2>Brands</h2>
               <div class="brands-name">
                 <ul class="nav nav-pills nav-stacked">
-                  @foreach ($taxon->companies as $company)
-                    <li>
-                      {!! Html::linkAction('TaxonController@show', $company->name, $parameters = array('id' => $taxon->id, 'company' => $company->id), []) !!}
-                    </li>
-                  @endforeach
+                  @unless(!isset($taxon))
+                    @foreach ($taxon->companies as $company)
+                      <li>
+                        {!! Html::linkAction('TaxonController@show', $company->name, $parameters = array('id' => $taxon->id, 'company' => $company->id), []) !!}
+                      </li>
+                    @endforeach
+                  @endunless
                 </ul>
               </div>
             </div><!--/brands_products-->

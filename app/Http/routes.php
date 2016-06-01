@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    $taxon = App\Taxon::find(1);
+    $taxon = App\Taxon::first();
     $devices = null;
     if(isset($taxon)){
       $devices = $taxon->devices();
