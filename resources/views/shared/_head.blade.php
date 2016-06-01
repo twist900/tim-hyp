@@ -4,13 +4,18 @@
 <meta name="author" content="">
 <title>Home | E-Shopper</title>
 
-{!! Html::style("css/bootstrap.min.css") !!}
-{!! Html::style("css/font-awesome.min.css") !!}
-{!! Html::style("css/prettyPhoto.css") !!}
-{!! Html::style("css/price-range.css") !!}
-{!! Html::style("css/animate.css") !!}
-{!! Html::style("css/main.css") !!}
-{!! Html::style("css/responsive.css") !!}
+@if (Request::isSecure())
+  {{$secure = true}}
+@else
+  {{$secure = false}}
+@endif
+{!! Html::style("css/bootstrap.min.css", array(), $secure) !!}
+{!! Html::style("css/font-awesome.min.css", array(), $secure) !!}
+{!! Html::style("css/prettyPhoto.css", array(), $secure) !!}
+{!! Html::style("css/price-range.css", array(), $secure) !!}
+{!! Html::style("css/animate.css", array(), $secure) !!}
+{!! Html::style("css/main.css", array(), $secure) !!}
+{!! Html::style("css/responsive.css", array(), $secure) !!}
 
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
