@@ -4,18 +4,13 @@
 <meta name="author" content="">
 <title>Home | E-Shopper</title>
 
-@if (Request::secure())
-  {{$secure = true}}
-@else
-  {{$secure = false}}
-@endif
-{!! Html::style("css/bootstrap.min.css", array(), $secure) !!}
-{!! Html::style("css/font-awesome.min.css", array(), $secure) !!}
-{!! Html::style("css/prettyPhoto.css", array(), $secure) !!}
-{!! Html::style("css/price-range.css", array(), $secure) !!}
-{!! Html::style("css/animate.css", array(), $secure) !!}
-{!! Html::style("css/main.css", array(), $secure) !!}
-{!! Html::style("css/responsive.css", array(), $secure) !!}
+<link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}" >
+<link rel="stylesheet" href="{{ URL::to('css/font-awesome.min.css') }}" >
+<link rel="stylesheet" href="{{ URL::to('css/prettyPhoto.css') }}" >
+<link rel="stylesheet" href="{{ URL::to('css/price-range.css') }}" >
+<link rel="stylesheet" href="{{ URL::to('css/animate.css') }}" >
+<link rel="stylesheet" href="{{ URL::to('css/main.css') }}" >
+<link rel="stylesheet" href="{{ URL::to('css/responsive.css') }}" >
 
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>

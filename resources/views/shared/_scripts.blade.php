@@ -1,12 +1,6 @@
-@if (Request::isSecure())
-  {{$secure = true}}
-@else
-  {{$secure = false}}
-@endif
-
-{!! Html::script("js/jquery.js",array(), $secure) !!}
-{!! Html::script("js/bootstrap.min.js",array(), $secure) !!}
-{!! Html::script("js/jquery.scrollUp.min.js",array(), $secure) !!}
-{!! Html::script("js/price-range.js",array(), $secure) !!}
-{!! Html::script("js/jquery.prettyPhoto.js",array(), $secure) !!}
-{!! Html::script("js/main.js",array(), $secure) !!}
+<script src="{{ URL::to('js/jquery.js') }}"></script>
+<script src="{{ URL::to('js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::to('js/jquery.scrollUp.min.js') }}"></script>
+<script src="{{ URL::to('js/price-range.js') }}"></script>
+<script src="{{ URL::to('js/jquery.prettyPhoto.js') }}"></script>
+<script src="{{ URL::to('js/main.js') }}"></script>
