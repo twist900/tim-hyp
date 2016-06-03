@@ -4,13 +4,13 @@
 <meta name="author" content="">
 <title>Home | E-Shopper</title>
 
-<link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}" >
-<link rel="stylesheet" href="{{ URL::to('css/font-awesome.min.css') }}" >
-<link rel="stylesheet" href="{{ URL::to('css/prettyPhoto.css') }}" >
-<link rel="stylesheet" href="{{ URL::to('css/price-range.css') }}" >
-<link rel="stylesheet" href="{{ URL::to('css/animate.css') }}" >
-<link rel="stylesheet" href="{{ URL::to('css/main.css') }}" >
-<link rel="stylesheet" href="{{ URL::to('css/responsive.css') }}" >
+<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css', array(),true) }}" >
+<link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css', array(),true) }}" >
+<link rel="stylesheet" href="{{ URL::asset('css/prettyPhoto.css', array(),true) }}" >
+<link rel="stylesheet" href="{{ URL::asset('css/price-range.css', array(),true) }}" >
+<link rel="stylesheet" href="{{ URL::asset('css/animate.css', array(),true) }}" >
+<link rel="stylesheet" href="{{ URL::asset('css/main.css', array(),true) }}" >
+<link rel="stylesheet" href="{{ URL::asset('css/responsive.css', array(),true) }}" >
 
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
