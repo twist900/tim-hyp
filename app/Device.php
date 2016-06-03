@@ -8,7 +8,7 @@ class Device extends Model
 {
   protected $guarded = [];
   /**
-      * Get all of the comment's likes.
+      * Get all of the device attachments.
       */
      public function attachments()
      {

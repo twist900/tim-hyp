@@ -27,7 +27,7 @@ class Attachment extends Model implements StaplerableInterface
     }
 
   /**
-      * Get all of the owning likeable models.
+      * Get all of the owning viewable models.
       */
      public function viewable()
      {

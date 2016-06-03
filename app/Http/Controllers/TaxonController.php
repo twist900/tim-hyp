@@ -32,7 +32,7 @@ class TaxonController extends Controller
     {
         $taxon = Taxon::find($id);
         $compId = Input::get('company');
-        if($taxon){ 
+        if($taxon){
             if(isset($compId)){
                 $devices = $taxon->devices()->where('company_id', $compId)->get();
             }

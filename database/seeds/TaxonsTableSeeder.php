@@ -34,7 +34,8 @@ class TaxonsTableSeeder extends Seeder
             'name' => 'Assistenza',
             'children' => [
               ['name' => 'Gestione linea e servizi'], ['name' => 'Controlla costi e pagamenti'],
-              ['name' => 'Supporto tecnico e configurazione'], ['name' => 'Smart Life Services']
+              ['name' => 'Supporto tecnico e configurazione'], ['name' => 'Smart Life Services'],
+              ['name' => 'Highlights', 'most_popular' => true]
             ]
         ]);
     }
