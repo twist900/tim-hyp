@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
+    use ViewsCountTrait;
+
     public function taxon()
     {
       return $this->belongsTo('App\Taxon');
