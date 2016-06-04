@@ -30,7 +30,9 @@ class ServiceController extends Controller
         $service = Service::find($id);
         $service->hit();
 
-        return view('service.show', ['service' => $service]);
+        $faqs = $service->faqs;
+
+        return view('service.show', ['service' => $service, 'faqs' => $faqs]);
         //
     }
 
