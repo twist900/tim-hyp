@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Taxon;
+use App\Service;
 
 use Illuminate\Support\Facades\Input;
 
@@ -31,17 +32,35 @@ class TaxonController extends Controller
     public function show($id)
     {
         $taxon = Taxon::find($id);
-        $compId = Input::get('company');
-        if($taxon){
-            if(isset($compId)){
-                $devices = $taxon->devices()->where('company_id', $compId)->get();
-            }
-            else{
-                $devices = $taxon->devices()->get();
-            }
-        }
-        return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices]);
 
+        $devices = $this->retrieveDevices($taxon);
+        $services = $this->retrieveServices($taxon);
+
+        return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices, 'services' => $services]);
+
+    }
+
+    private function retrieveDevices($taxon){
+        $compId = Input::get('company');
+
+        if(isset($compId)){
+            $devices = $taxon->devices()->where('company_id', $compId)->get();
+        }
+        else{
+            $devices = $taxon->devices;
+        }
+        return $devices;
+    }
+
+    private function retrieveServices($taxon){
+        if($taxon->most_popular){
+            $services = Service::mostPopular();
+        }
+        else {
+            $services = $taxon->services;
+        }
+
+        return $services;
     }
 
   }

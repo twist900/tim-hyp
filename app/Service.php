@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     use ViewsCountTrait;
+
+    public $morphClass = 'MorphService';
     protected $guarded = [];
 
     public function taxon()
