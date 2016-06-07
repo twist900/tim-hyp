@@ -7,6 +7,8 @@
     @include('taxon._device_taxon', ['taxon' => $taxon, 'devices' => $devices])
   @elseif($taxon->parent->name == "Assistenza")
     @include('taxon._assistance_service_taxon', ['taxon' => $taxon, 'services' => $services])
+  @elseif($taxon->parent->name == "Smart Life")
+    @include('taxon._smart_life_taxon', ['taxon' => $taxon, 'services' => $services])
   @endif
 
 @else

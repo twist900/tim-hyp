@@ -22,4 +22,8 @@ class Taxon extends Model
   {
     return $this->hasMany('App\Service');
   }
+  public function smartLives()
+  {
+    return $this->hasMany('App\SmartLife');
+  }
 }

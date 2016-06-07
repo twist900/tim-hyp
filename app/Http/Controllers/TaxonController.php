@@ -35,8 +35,9 @@ class TaxonController extends Controller
 
         $devices = $this->retrieveDevices($taxon);
         $services = $this->retrieveServices($taxon);
+        $smartLives = $taxon->smartLives;
 
-        return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices, 'services' => $services]);
+        return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices, 'services' => $services, 'smartLives' => $smartLives]);
 
     }
 
