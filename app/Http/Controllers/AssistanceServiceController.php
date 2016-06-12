@@ -5,10 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\AssistanceService;
 
-use App\SmartLife;
-
-class SmartLifeController extends Controller
+class AssistanceServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,8 +27,13 @@ class SmartLifeController extends Controller
      */
     public function show($id)
     {
-        $smartLife = SmartLife::find($id);
-        return view('smart_life.show', ['smartLife' => $smartLife]);
+        $service = AssistanceService::find($id);
+        $service->hit();
+
+        $faqs = $service->faqs;
+
+        return view('service.show', ['service' => $service, 'faqs' => $faqs]);
         //
     }
+
 }

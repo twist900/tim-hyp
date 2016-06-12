@@ -1,9 +1,10 @@
 <h2>{{ $taxon->name }}</h2>
 <ul class="list-group">
-@foreach($smartLives as $smartLife)
+
+@foreach($smartLifeServices as $smartLifeService)
 
   <li class="list-group-item">
-    {!! Html::linkAction('SmartLifeController@show', $smartLife->name,  $smartLife->id, []) !!}
+    {!! Html::linkAction('SmartLifeServiceController@show', $smartLifeService->name,  $smartLifeService->id, []) !!}
   </li>
 
 @endforeach

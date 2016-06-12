@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Taxon;
-use App\Service;
+use App\SmartLifeService;
+use App\AssistanceService;
 
 use Illuminate\Support\Facades\Input;
 
@@ -34,10 +35,10 @@ class TaxonController extends Controller
         $taxon = Taxon::find($id);
 
         $devices = $this->retrieveDevices($taxon);
-        $services = $this->retrieveServices($taxon);
-        $smartLives = $taxon->smartLives;
+        $assistanceServices = $this->retrieveAssistanceServices($taxon);
+        $smartLifeServices = $taxon->smartLifeServices;
 
-        return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices, 'services' => $services, 'smartLives' => $smartLives]);
+        return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices, 'assistanceServices' => $assistanceServices, 'smartLifeServices' => $smartLifeServices]);
 
     }
 
@@ -53,15 +54,15 @@ class TaxonController extends Controller
         return $devices;
     }
 
-    private function retrieveServices($taxon){
+    private function retrieveAssistanceServices($taxon){
         if($taxon->most_popular){
-            $services = Service::mostPopular();
+            $assistanceServices = AssistanceService::mostPopular();
         }
         else {
-            $services = $taxon->services;
+            $assistanceServices = $taxon->assistanceServices;
         }
 
-        return $services;
+        return $assistanceServices;
     }
 
   }
