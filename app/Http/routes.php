@@ -28,6 +28,10 @@ Route::resource('device', 'DeviceController', ['only' => [
     'index', 'show'
 ]]);
 
-Route::resource('service', 'ServiceController', ['only' => [
+Route::resource('assistance-service', 'AssistanceServiceController', ['only' => [
+    'index', 'show'
+]]);
+
+Route::resource('smart-life-service', 'SmartLifeServiceController', ['only' => [
     'index', 'show'
 ]]);

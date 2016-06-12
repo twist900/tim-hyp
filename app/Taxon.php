@@ -18,8 +18,12 @@ class Taxon extends Model
      return $this->belongsToMany('App\Company');
   }
 
-  public function services()
+  public function assistanceServices()
   {
-    return $this->hasMany('App\Service');
+    return $this->hasMany('App\AssistanceService');
+  }
+  public function smartLifeServices()
+  {
+    return $this->hasMany('App\SmartLifeService');
   }
 }

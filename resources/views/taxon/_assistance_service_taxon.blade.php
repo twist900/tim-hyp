@@ -1,13 +1,13 @@
 <h2>{{ $taxon->name }}</h2>
 <ul class="list-group">
-@foreach($services as $service)
+@foreach($assistanceServices as $assistanceService)
 
   <li class="list-group-item">
     @if($taxon->most_popular)
-      <span class="label label-default label-pill pull-right">{{ $service->views()->count() }}</span>
+      <span class="label label-default label-pill pull-right">{{ $assistanceService->views()->count() }}</span>
     @endif
 
-    {!! Html::linkAction('ServiceController@show', $service->name,  $service->id, []) !!}
+    {!! Html::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []) !!}
   </li>
 
 @endforeach

@@ -18,6 +18,6 @@ class Service extends Model
 
     public function faqs()
     {
-      return $this->hasMany('App\Faq');
+      return $this->hasMany('App\Faq', 'service_id');
     }
 }
