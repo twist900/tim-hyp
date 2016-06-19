@@ -21,7 +21,7 @@
           <div class="mainmenu pull-left">
             <ul class="nav navbar-nav collapse navbar-collapse">
               <?php foreach( App\Taxon::whereIsRoot()->get() as $rootTaxon): ?>
-                <li class="dropdown"><a href="#"><?php echo $rootTaxon->name; ?><i class="fa fa-angle-down"></i></a>
+                <li class="dropdown"><a href="<?php echo action('TaxonController@show', ['id' => $rootTaxon->id]);; ?>"><?php echo $rootTaxon->name; ?><i class="fa fa-angle-down"></i></a>
                     <ul role="menu" class="sub-menu">
                       <?php foreach( $rootTaxon->descendants as  $childTaxon ): ?>
                        <li>

@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="<?php echo e(URL::asset('css/animate.css', array(),true)); ?>" >
 <link rel="stylesheet" href="<?php echo e(URL::asset('css/main.css', array(),true)); ?>" >
 <link rel="stylesheet" href="<?php echo e(URL::asset('css/responsive.css', array(),true)); ?>" >
-
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
