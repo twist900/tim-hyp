@@ -13,8 +13,8 @@ return [
     |
     */
     's3_client_config' => [
-        'key' => env('AWS_ACCESS_KEY_ID'),
-        'secret' => env('AWS_SECRET_ACCESS_KEY'),
+        'key' => env('AWS_ACCESS_KEY_ID'. ''),
+        'secret' => env('AWS_SECRET_ACCESS_KEY', ''),
         'region' => env('AWS_REGION', 'eu-central-1'),
         'version' => 'latest',
         'scheme' => 'http',
@@ -32,7 +32,7 @@ return [
     |
     */
     's3_object_config' => [
-        'Bucket' => env('S3_BUCKET_NAME'),
+        'Bucket' => env('S3_BUCKET_NAME', ''),
         'ACL' => 'public-read',
     ],
 
