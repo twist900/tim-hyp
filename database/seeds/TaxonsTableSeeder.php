@@ -37,6 +37,7 @@ class TaxonsTableSeeder extends Seeder
               ['name' => 'Servizi alla persona',
                 'short_description' => 'Un nuovo approccio al mondo dell’ e-payment e dell’identità digitale. Potrai organizzare e gestire con semplicità e in tutta sicurezza i tuoi pagamenti digitali, il tuo archivio personale.',
                 'icon' => 'https://img.tim.it:443/sdr/04_identita_payment.png'
+              ]
             ]
         ]);
 
