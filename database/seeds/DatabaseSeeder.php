@@ -26,10 +26,11 @@ class DatabaseSeeder extends Seeder
       $this->call(TaxonsTableSeeder::class);
       $this->call(CompaniesTableSeeder::class);
       $this->call(AssistanceServicesTableSeeder::class);
+      $this->call(TestimonialsTableSeeder::class);
       $this->call(FaqsTableSeeder::class);
       $this->call(SmartLivesTableSeeder::class);
       $this->call(DevicesTableSeeder::class);
-      $this->call(TestimonialsTableSeeder::class);
+
 
       // supposed to only apply to a single connection and reset it's self
       // but I like to explicitly undo what I've done for clarity
