@@ -6,10 +6,10 @@
         @include('shared._header')
 
 
-        <div class="container">
+        <!-- <div class="container"> -->
             @yield('content')
-        </div>
-
+<!--         </div>
+ -->
         @include('shared._footer')
         @include('shared._scripts')
     </body>

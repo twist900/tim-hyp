@@ -1,19 +1,20 @@
 @extends('layouts.application')
 @section('content')
+<div class="container">
 
-@unless($taxon->parent == null)
+  @unless($taxon->parent == null)
 
-  @if($taxon->parent->name == "Prodotti")
-    @include('taxon._device_taxon', ['taxon' => $taxon, 'devices' => $devices])
-  @elseif($taxon->parent->name == "Assistenza")
-    @include('taxon._assistance_service_taxon', ['taxon' => $taxon, 'assistanceServices' => $assistanceServices])
-  @elseif($taxon->parent->name == "Smart Life")
-    @include('taxon._smart_life_taxon', ['taxon' => $taxon, 'smartLifeServices' => $smartLifeServices ])
-  @endif
+    @if($taxon->parent->name == "Prodotti")
+      @include('taxon._device_taxon', ['taxon' => $taxon, 'devices' => $devices])
+    @elseif($taxon->parent->name == "Assistenza")
+      @include('taxon._assistance_service_taxon', ['taxon' => $taxon, 'assistanceServices' => $assistanceServices])
+    @elseif($taxon->parent->name == "Smart Life")
+      @include('taxon._smart_life_taxon', ['taxon' => $taxon, 'smartLifeServices' => $smartLifeServices ])
+    @endif
 
-@else
-  @include('taxon._root_taxon', ['taxon' => $taxon])
-@endunless
+  @else
+    @include('taxon._root_taxon', ['taxon' => $taxon])
+  @endunless
 
-
+</div>
 @stop
