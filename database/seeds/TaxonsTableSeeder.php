@@ -26,7 +26,7 @@ class TaxonsTableSeeder extends Seeder
             'name' => 'Smart Life',
             'children' => [
               ['name' => 'TV & Entertainment',
-                'short_description' => 'SERIE TV, FILM, MUSICA, LIBRI, GIOCHI E CALCIO. Scopri il tipo di intrattenimento che preferisci. Il divertimento comincia subito! Quando vuoi e come vuoi.'
+                'short_description' => 'SERIE TV, FILM, MUSICA, LIBRI, GIOCHI E CALCIO. Scopri il tipo di intrattenimento che preferisci. Il divertimento comincia subito! Quando vuoi e come vuoi.',
                 'icon' => 'https://img.tim.it:443/sdr/01_Intrattenimento_0.png'],
               ['name' => 'Salute e benessere',
                 'short_description' => 'Prova gli ultimi wearables. Scopri come salute e benessere possono cambiare in meglio la tua vita. Libera la tua voglia di movimento. Condividi con gli amici i tuoi risultati. Il futuro è smart.',
