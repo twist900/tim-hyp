@@ -8,7 +8,7 @@
             <?php endif; ?>
             <h2>$ <?php echo e($device->cost); ?></h2>
             <div class="product-name">
-              <?php echo Html::linkAction('DeviceController@show', $device->name,  $device->id, []); ?>
+              <?php echo HTML::linkAction('DeviceController@show', $device->name,  $device->id, []); ?>
 
             </div>
           </div>

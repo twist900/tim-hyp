@@ -187,7 +187,7 @@
                   @unless(!isset($taxon))
                     @foreach ($taxon->companies as $company)
                       <li>
-                        {!! Html::linkAction('TaxonController@show', $company->name, $parameters = array('id' => $taxon->id, 'company' => $company->id), []) !!}
+                        {!! HTML::linkAction('TaxonController@show', $company->name, $parameters = array('id' => $taxon->id, 'company' => $company->id), []) !!}
                       </li>
                     @endforeach
                   @endunless

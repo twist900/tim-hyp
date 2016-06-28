@@ -157,6 +157,7 @@ return [
         Codesleeve\LaravelStapler\Providers\L5ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Aws\Laravel\AwsServiceProvider::class,
+        Watson\BootstrapForm\BootstrapFormServiceProvider::class,
     ],
 
     /*
@@ -203,9 +204,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,
+        'HTML' => Collective\Html\HtmlFacade::class,
         'MorphService' => App\Service::class,
         'AWS' => Aws\Laravel\AwsFacade::class,
+        'BootForm' => Watson\BootstrapForm\Facades\BootstrapForm::class,
+
 
     ],
 

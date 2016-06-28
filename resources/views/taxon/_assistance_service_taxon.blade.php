@@ -7,7 +7,7 @@
       <span class="label label-default label-pill pull-right">{{ $assistanceService->views()->count() }}</span>
     @endif
 
-    {!! Html::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []) !!}
+    {!! HTML::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []) !!}
   </li>
 
 @endforeach

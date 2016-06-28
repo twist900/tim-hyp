@@ -8,7 +8,7 @@
             @endif
             <h2>$ {{ $device->cost }}</h2>
             <div class="product-name">
-              {!! Html::linkAction('DeviceController@show', $device->name,  $device->id, []) !!}
+              {!! HTML::linkAction('DeviceController@show', $device->name,  $device->id, []) !!}
             </div>
           </div>
 

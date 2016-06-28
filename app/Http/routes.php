@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as' => 'home', function () {
     return view('static.home');
-});
+}]);
 
 Route::resource('taxon', 'TaxonController', ['only' => [
     'index', 'show'
@@ -29,4 +29,8 @@ Route::resource('assistance-service', 'AssistanceServiceController', ['only' => 
 
 Route::resource('smart-life-service', 'SmartLifeServiceController', ['only' => [
     'index', 'show'
+]]);
+
+Route::resource('subscription', 'SubscriptionController', ['only' => [
+    'create', 'store'
 ]]);

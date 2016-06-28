@@ -4,7 +4,7 @@
 <?php foreach($smartLifeServices as $smartLifeService): ?>
 
   <li class="list-group-item">
-    <?php echo Html::linkAction('SmartLifeServiceController@show', $smartLifeService->name,  $smartLifeService->id, []); ?>
+    <?php echo HTML::linkAction('SmartLifeServiceController@show', $smartLifeService->name,  $smartLifeService->id, []); ?>
 
   </li>
 

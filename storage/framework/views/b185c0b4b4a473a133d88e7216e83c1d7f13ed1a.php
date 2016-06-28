@@ -25,7 +25,7 @@
                     <ul role="menu" class="sub-menu">
                       <?php foreach( $rootTaxon->descendants as  $childTaxon ): ?>
                        <li>
-                          <?php echo Html::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, []); ?>
+                          <?php echo HTML::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, []); ?>
 
                         </li>
                       <?php endforeach; ?>

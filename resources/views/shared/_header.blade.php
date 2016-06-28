@@ -25,7 +25,7 @@
                     <ul role="menu" class="sub-menu">
                       @foreach( $rootTaxon->descendants as  $childTaxon )
                        <li>
-                          {!! Html::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, [])
+                          {!! HTML::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, [])
                         !!}
                         </li>
                       @endforeach

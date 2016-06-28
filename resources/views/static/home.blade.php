@@ -7,7 +7,7 @@
         <h1>Join TIM, stay connected</h1>
         <hr>
         <p>Stay connected with your family and friend, anytime, anywhere!</p>
-        <a href="#about" class="btn btn-primary btn-xl page-scroll">SIGN UP</a>
+        <a href="{{ action('SubscriptionController@create') }}" class="btn btn-primary btn-xl page-scroll">SIGN UP</a>
     </div>
   </div>
 </header>

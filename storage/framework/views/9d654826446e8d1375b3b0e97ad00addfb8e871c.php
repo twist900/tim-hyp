@@ -184,7 +184,7 @@
                   <?php if ( ! (!isset($taxon))): ?>
                     <?php foreach($taxon->companies as $company): ?>
                       <li>
-                        <?php echo Html::linkAction('TaxonController@show', $company->name, $parameters = array('id' => $taxon->id, 'company' => $company->id), []); ?>
+                        <?php echo HTML::linkAction('TaxonController@show', $company->name, $parameters = array('id' => $taxon->id, 'company' => $company->id), []); ?>
 
                       </li>
                     <?php endforeach; ?>
