@@ -40,7 +40,7 @@ class DevicesTableSeeder extends Seeder
       foreach($dbTaxonModel->companies as $company){
         $response = $this->client->request('GET', "/v1/products(categoryPath.name=$bestBuyTaxon&manufacturer={$company->name})?format=json&show=name,regularPrice,longDescription,details,image,angleImage,backViewImage,leftViewImage,rightViewImage&apiKey=" . env('BEST_BUY_API_KEY', 'You need a key'));
         $jsonResponse = json_decode($response->getBody());
-        foreach( $jsonResponse->products as $product){
+        foreach( array_slice($jsonResponse->products, 0, 5) as $product){
           $device = new App\Device([ 'name' => $product->name, 'cost' => $product->regularPrice,
             'description' => $product->longDescription]);
           $device->save();
