@@ -25,8 +25,18 @@ class TaxonsTableSeeder extends Seeder
         $SLServicesTaxonTree = App\Taxon::create([
             'name' => 'Smart Life',
             'children' => [
-              ['name' => 'TV & Entertainment'], ['name' => 'Salute e benessere'],
-              ['name' => 'Casa e Famiglia'], ['name' => 'Servizi alla persona']
+              ['name' => 'TV & Entertainment',
+                'short_description' => 'SERIE TV, FILM, MUSICA, LIBRI, GIOCHI E CALCIO. Scopri il tipo di intrattenimento che preferisci. Il divertimento comincia subito! Quando vuoi e come vuoi.'
+                'icon' => 'https://img.tim.it:443/sdr/01_Intrattenimento_0.png'],
+              ['name' => 'Salute e benessere',
+                'short_description' => 'Prova gli ultimi wearables. Scopri come salute e benessere possono cambiare in meglio la tua vita. Libera la tua voglia di movimento. Condividi con gli amici i tuoi risultati. Il futuro è smart.',
+                'icon' => 'https://img.tim.it:443/sdr/02_icona_salute_benessere.png'],
+              ['name' => 'Casa e Famiglia',
+                'short_description' => 'Smart Life vuol dire anche una vita più semplice e sicura. Anche per la tua casa e i tuoi cari.',
+                'icon' => 'https://img.tim.it:443/sdr/03_casa_famiglia_v2.png'],
+              ['name' => 'Servizi alla persona',
+                'short_description' => 'Un nuovo approccio al mondo dell’ e-payment e dell’identità digitale. Potrai organizzare e gestire con semplicità e in tutta sicurezza i tuoi pagamenti digitali, il tuo archivio personale.',
+                'icon' => 'https://img.tim.it:443/sdr/04_identita_payment.png'
             ]
         ]);
 

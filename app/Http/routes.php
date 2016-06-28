@@ -12,12 +12,7 @@
 */
 
 Route::get('/', function () {
-    $taxon = App\Taxon::first();
-    $devices = null;
-    if(isset($taxon)){
-      $devices = $taxon->devices();
-    }
-    return view('taxon.show', ['taxon' => $taxon, 'devices' => $devices]);
+    return view('static.home');
 });
 
 Route::resource('taxon', 'TaxonController', ['only' => [
