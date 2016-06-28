@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="{{ URL::asset('css/responsive.css', array(),true) }}" >
 @else
   <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-  <link href='https://s3.eu-central-1.amazonaws.com/timhyp/font-awesome.min.css' rel='stylesheet' type='text/css'>
+  <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
   <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/prettyPhoto.css' rel='stylesheet' type='text/css'>
   <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/price-range.css' rel='stylesheet' type='text/css'>
   <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/animate.css' rel='stylesheet' type='text/css'>

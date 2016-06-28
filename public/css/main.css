@@ -280,7 +280,7 @@ a#scrollUp i{
 
 @media(min-width:768px) {
     .home-header {
-        min-height: 60%;
+        height: 400px;
     }
 
     .home-header .header-content {
@@ -348,7 +348,7 @@ a#scrollUp i{
 
 @media(min-width:768px) {
     .assist-section {
-        min-height: 60%;
+       height: 400px;
     }
 
     .assist-section .header-content {
