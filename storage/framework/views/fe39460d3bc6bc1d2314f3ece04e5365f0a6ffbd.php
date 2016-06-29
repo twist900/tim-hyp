@@ -7,7 +7,7 @@
       <span class="label label-default label-pill pull-right"><?php echo e($assistanceService->views()->count()); ?></span>
     <?php endif; ?>
 
-    <?php echo Html::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []); ?>
+    <?php echo HTML::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []); ?>
 
   </li>
 

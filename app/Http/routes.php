@@ -34,3 +34,11 @@ Route::resource('smart-life-service', 'SmartLifeServiceController', ['only' => [
 Route::resource('subscription', 'SubscriptionController', ['only' => [
     'create', 'store'
 ]]);
+
+Route::get('/the-group', ['as' => 'the_group', function () {
+    return view('static.the_group');
+}]);
+
+Route::get('/who-we-are', ['as' => 'who_we_are', function () {
+    return view('static.who_we_are');
+}]);

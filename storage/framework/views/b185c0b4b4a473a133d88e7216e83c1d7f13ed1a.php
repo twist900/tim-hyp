@@ -32,6 +32,8 @@
                     </ul>
                 </li>
               <?php endforeach; ?>
+              <li><a href="/who-we-are">Who We Are</a></li>
+              <li><a href="/the-group">The Group</a></li>
             </ul>
           </div>
         </div>
