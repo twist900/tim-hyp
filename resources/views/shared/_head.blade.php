@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="{{ URL::asset('css/animate.css', array(),true) }}" >
   <link rel="stylesheet" href="{{ URL::asset('css/main.css', array(),true) }}" >
   <link rel="stylesheet" href="{{ URL::asset('css/responsive.css', array(),true) }}" >
+  <link rel="stylesheet" href="{{ URL::asset('css/slick.css', array(),true) }}" >
+  <link rel="stylesheet" href="{{ URL::asset('css/slick-theme.css', array(),true) }}" >
 @else
   <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
   <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
@@ -20,6 +22,8 @@
   <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/animate.css' rel='stylesheet' type='text/css'>
   <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/main.css' rel='stylesheet' type='text/css'>
   <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/responsive.css' rel='stylesheet' type='text/css'>
+  <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/slick.css' rel='stylesheet' type='text/css'>
+  <link href='https://s3.eu-central-1.amazonaws.com/timhyp/css/slick-theme.css' rel='stylesheet' type='text/css'>
 @endif
 
 <!--[if lt IE 9]>

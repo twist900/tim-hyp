@@ -1372,9 +1372,8 @@ div.product-name{
 }
 
 .productinfo img{
-  height: 220px;
-  background-position: 50% 50%;
-  background-repeat:   no-repeat;
+  max-width:100%;
+  height:220px;
 
 }
 
@@ -1635,6 +1634,10 @@ div.product-name{
 /*************************
 *******Product Details CSS******
 **************************/
+.more-views{float: left;clear:left}
+.product-image-zoom{width: 80%;float:left;}
+
+.more-views {width:15%;}
 
 .product-details{
 	overflow:hidden;
@@ -1664,8 +1667,8 @@ div.product-name{
 }
 
 .view-product img {
-  height: 420px;
-
+  max-width:100%;
+  max-height:460px;
   display:block;
   margin:auto;
 

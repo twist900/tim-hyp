@@ -40,5 +40,8 @@ $(document).ready(function(){
 				});
 			}
 		});
+
+		$('.product-view-slider').slick();
+
 	});
 });
