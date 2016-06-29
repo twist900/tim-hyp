@@ -46,7 +46,7 @@
   <div class="header-content">
     <div class="header-content-inner">
       <div class="content">
-        <h1>#TIMgirlsHackaton</h1>
+        <h1>#Hackaton</h1>
         <p>The coolest women oriented tech competition joins Turin, Venice, Naples and Catania.</p>
       </div>
     </div>

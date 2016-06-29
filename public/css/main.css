@@ -661,6 +661,7 @@ a#scrollUp i{
 }
 
 .group-panel-2 .header-content .header-content-inner .content{
+  flex-wrap: wrap;
   width: 50%;
 
 }
