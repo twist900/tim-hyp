@@ -1,6 +1,5 @@
 @extends('layouts.application')
 @section('content')
-
 <header class="home-header">
   <div class="header-content">
     <div class="header-content-inner">
