@@ -16,9 +16,22 @@ class TaxonsTableSeeder extends Seeder
         $deviceTaxonTree = App\Taxon::create([
             'name' => 'Prodotti',
             'children' => [
-                [ 'name' => 'Smartphone e Telefoni'],[ 'name' => 'Tablet e Computer' ],
-                [ 'name' => 'Modem e Networking'], [ 'name' => 'TV e Smart Living' ],
-                [ 'name' => 'Outlet' ]
+                [ 'name' => 'Smartphone e Telefoni',
+                  'icon' => 'https://img.tim.it:443/sdr/01_SmartphoneTelefoni_1.png'
+                ],
+                [ 'name' => 'Tablet e Computer',
+                  'icon' => 'https://img.tim.it/sdr/02_TabletComputer.png'
+                ],
+                [ 'name' => 'Modem e Networking',
+                  'icon' => 'https://img.tim.it/sdr/03_ModemChiavette.png'
+                ],
+                [ 'name' => 'TV e Smart Living',
+                  'icon' => 'https://img.tim.it/sdr/04_TVDigitalHome.png'
+                ],
+                [
+                  'name' => 'Outlet',
+                  'icon' => 'https://img.tim.it/sdr/05_Outlet_2.png'
+                ]
             ]
         ]);
 

@@ -41,7 +41,10 @@ $(document).ready(function(){
 			}
 		});
 
-		$('.product-view-slider').slick();
+		$('.product-view-slider').slick({
+			dots: true
+		}
+		);
 
 	});
 });

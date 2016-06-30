@@ -25,8 +25,14 @@
                     <ul role="menu" class="sub-menu">
                       <?php foreach( $rootTaxon->descendants as  $childTaxon ): ?>
                        <li>
-                          <?php echo HTML::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, []); ?>
+                          <div class="taxon-title">
+                              <?php if( File::exists(public_path($childTaxon->icon->url())) ): ?>
+                                <img class="taxon-title-image"  src="<?php echo e($childTaxon->icon->url('thumb')); ?>">
+                              <?php endif; ?>
 
+                              <?php echo HTML::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, []); ?>
+
+                           </div>
                         </li>
                       <?php endforeach; ?>
                     </ul>

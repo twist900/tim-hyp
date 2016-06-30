@@ -25,8 +25,13 @@
                     <ul role="menu" class="sub-menu">
                       @foreach( $rootTaxon->descendants as  $childTaxon )
                        <li>
-                          {!! HTML::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, [])
-                        !!}
+                          <div class="taxon-title">
+                              @if( File::exists(public_path($childTaxon->icon->url())) )
+                                <img class="taxon-title-image"  src="{{ $childTaxon->icon->url('thumb') }}">
+                              @endif
+
+                              {!! HTML::linkAction('TaxonController@show', $childTaxon->name,  $childTaxon->id, []) !!}
+                           </div>
                         </li>
                       @endforeach
                     </ul>
