@@ -19,51 +19,44 @@ class SmartLivesTableSeeder extends Seeder
 
         $smartLife = new App\SmartLifeService([
           'name' => 'TV',
-          'description' => "Divertimento senza limiti",
-          "benefits" => "<p>Scopri il grande cinema, le serie più appassionanti, i cartoni animati più amati, lo sport
-e tanto altro ancora su TV, PC, tablet e smartphone</p>"
+          'description' => "Endless fun",
+          "benefits" => "<p>Discover best movies, most exciting TV shows, cartoons, sport and much more on TVs, computers, tablets  and smartphones.</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
         $smartLife = new App\SmartLifeService([
           'name' => 'TIMmusic',
-          'description' => "La colonna sonora della tua vita",
-          "benefits" => "<p>Ascolta milioni di brani in streaming, tutte le novità discografiche,
-anteprime esclusive e tante playlist di tutti i generi. Su smartphone
-senza consumare GB, pc e tablet. Quando vuoi e quanto vuoi.</p>"
+          'description' => "The soundtrack of your life",
+          "benefits" => "<p>Listen to million of songs in streaming, check out newest music, choose between tons of playlists for every mood.
+On smartphones, computers and tablets. Whenever and wherever you want.</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
         $smartLife = new App\SmartLifeService([
           'name' => 'TIMreading',
-          'description' => "Leggi quando vuoi, cosa vuoi",
-          "benefits" => "<p>Porta sempre con te su Smartphone e Tablet i tuoi eBook preferiti,
-segui tutte le tue passioni scegliendo tra i magazine più amati e sfoglia
-il tuo quotidiano dalle prime ore del mattino.
-Su TIMreading trovi ciò che ami leggere, dove e quando vuoi.</p>"
+          'description' => "Read everywhere. Whenever you want.",
+          "benefits" => "<p>Bring always with you your favorite books on smartphones and tablets.
+Follow your passions in the most read magazines.
+Read newspapers from early morning. </p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
         $smartLife = new App\SmartLifeService([
           'name' => 'TIMgames',
-          'description' => "Mettiti in gioco, una nuova sfida ti aspetta!",
-          "benefits" => "<p>Sparatutto, sport estremi, i migliori Classici e molto altro ancora...
-Con TIMgames hai a disposizione centinaia di giochi per il tuo
-smartphone e tablet, per divertirti dove e quando vuoi.</p>"
+          'description' => "New challenges are waiting for you!",
+          "benefits" => "<p>Shooter games, extreme sports, best classics and much more. With TIMgames you'll have hundreds of games
+ always available on your smartphone and tablet.</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
         $smartLife = new App\SmartLifeService([
           'name' => 'Serie A TIM',
-          'description' => "Il calcio è di chi lo ama",
-          "benefits" => "<p>Vivi il meglio della Serie A TIM e i migliori momenti del Campionato 2015/2016
-con tutte le notizie, i video-goal, le sintesi sul tuo Smartphone o Tablet
-e senza consumare GB. L’unica App ufficiale della Serie A TIM.
-Scarica l’App e vivi la magia del calcio!</p>"
+          'description' => "For football lovers",
+          "benefits" => "<p>Never miss Serie A TIM highlights and the best moments from 2015/2016 championship.  All latest news, video-goals and recaps always available on TIM's app!</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
@@ -73,8 +66,8 @@ Scarica l’App e vivi la magia del calcio!</p>"
         $smartLifeTaxon = App\Taxon::where('name', 'Salute e benessere')->first();
 
         $smartLife = new App\SmartLifeService([
-          'name' => 'Salute e benessere',
-          "benefits" => "<p>Prova gli ultimi wearables. Scopri come salute e benessere possono cambiare in meglio la tua vita. Libera la tua voglia di movimento. Condividi con gli amici i tuoi risultati. Il futuro è smart.</p>"
+          'name' => 'Health and Wellness',
+          "benefits" => "<p>Try last wearables devices. Find out how health and wellnes can change your life for the best. Free your desire to move. Share your results with friends. The future is smart.</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
@@ -85,25 +78,25 @@ Scarica l’App e vivi la magia del calcio!</p>"
 
         $smartLife = new App\SmartLifeService([
           'name' => 'TIMTag',
-          'description' => "Smart Life vuol dire anche una vita più semplice e sicura. Anche per la tua casa e i tuoi cari.",
-          "benefits" => "<p>TIMTag, è il dispositivo che ti informa sulla posizione del tuo amico a quattro zampe e delle cose a te più care.
-Segui in tempo reale i suoi spostamenti sul tuo smartphone senza perderlo mai di vista./p>"
+          'description' => "Smart Life means also a simpler and more secure life. Also for your home and your loved ones.",
+          "benefits" => "<p>TIMTag is the device that informs you on the position of your pet friend and of your favorite things.
+Follow its movement on your smartphone, never loosing it again./p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
         $smartLife = new App\SmartLifeService([
           'name' => 'TIM Home Connect',
-          'description' => "Smart Life vuol dire anche una vita più semplice e sicura. Anche per la tua casa e i tuoi cari.",
-          "benefits" => "<p>La soluzione ideale per gestire tutti i sistemi di domotica presenti nella tua casa, dalla semplice caldaia domestica, ai sistemi di protezione della casa, ai più avanzati sistemi di monitoraggio.</p>"
+          'description' => "Smart Life means also a simpler and more secure life. Also for your home and your loved ones.",
+          "benefits" => "<p>The solution to manafe all domotic systems in your house, from security systems to heat, to the most advanced monitoring systems.</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
         $smartLife = new App\SmartLifeService([
           'name' => 'D-Link SmartHome',
-          'description' => "Smart Life vuol dire anche una vita più semplice e sicura. Anche per la tua casa e i tuoi cari.",
-          "benefits" => "<p>D-Link SmartHome Starter Kit ti offre la possibilità di impostare, controllare, monitorare e automatizzare la tua casa ovunque ti trovi.</p>"
+          'description' => "Smart Life means also a simpler and more secure life. Also for your home and your loved ones.",
+          "benefits" => "<p>D-Link SmartHome Starter Kit gives you the possibility to configure, control, monitor and automatize your house wherever you are.</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
@@ -113,33 +106,33 @@ Segui in tempo reale i suoi spostamenti sul tuo smartphone senza perderlo mai di
         $smartLifeTaxon = App\Taxon::where('name', 'Servizi alla persona')->first();
 
         $smartLife = new App\SmartLifeService([
-          'name' => 'Pagamenti',
-          'description' => "Scegli le carte di pagamento di Intesa Sanpaolo, BNL o Mediolanum: pagare è semplice e conveniente!",
-          "benefits" => "<p>Accedere ai servizi, pagare per una sottoscrizione o per un acquisto, le transazioni digitali sono ormai parte della nostra vita quotidiana e si stanno via via diffondendo. L’affidabilità è una componente cruciale. Lo storage di denaro, oltre che di dati personali, può essere più comodo e anche più sicuro</p>"
+          'name' => 'Payments',
+          'description' => "Choose between payments cards from Intesa Sanpaolo, BNL or Mediolanum: paying is simple and convenient!",
+          "benefits" => "<p>Access to services, pay for a subscription or a product, digital transactions are nowadays parts of our life and they are increasing. Security is a crucial aspect. Money and personal data storage can be more comfortable and safe.</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
         $smartLife = new App\SmartLifeService([
-          'name' => 'Trasporti',
-          'description' => "Acquista i biglietti dei trasporti della tua città, attraverso il servizio SMS ticketing. Verifica subito se il servizio è già disponibile nella tua città!",
-          "benefits" => "<p>Accedere ai servizi, pagare per una sottoscrizione o per un acquisto, le transazioni digitali sono ormai parte della nostra vita quotidiana e si stanno via via diffondendo. L’affidabilità è una componente cruciale. Lo storage di denaro, oltre che di dati personali, può essere più comodo e anche più sicuro</p>"
+          'name' => 'Transports',
+          'description' => "Buy public transport tickets, with TIM's SMS ticketing service. Verify now if the service is already available in your city!",
+          "benefits" => "<p>Access to services, pay for a subscription or a product, digital transactions are nowadays parts of our life and they are increasing. Security is a crucial aspect. Money and personal data storage can be more comfortable and safe.</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
         $smartLife = new App\SmartLifeService([
           'name' => 'Fidelity card',
-          'description' => "Salva nel TIM Wallet le tue carte fedeltà per averle sempre con te",
-          "benefits" => "<p>Accedere ai servizi, pagare per una sottoscrizione o per un acquisto, le transazioni digitali sono ormai parte della nostra vita quotidiana e si stanno via via diffondendo. L’affidabilità è una componente cruciale. Lo storage di denaro, oltre che di dati personali, può essere più comodo e anche più sicuro</p>"
+          'description' => "Save in TIM Wallet your fidelity cards to have them always with you",
+          "benefits" => "<p>Access to services, pay for a subscription or a product, digital transactions are nowadays parts of our life and they are increasing. Security is a crucial aspect. Money and personal data storage can be more comfortable and safe.</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
         $smartLife = new App\SmartLifeService([
           'name' => 'Coupon',
-          'description' => "Risparmia su un’ampia gamma di prodotti e servizi selezionati da QUI! Group",
-          "benefits" => "<p>Accedere ai servizi, pagare per una sottoscrizione o per un acquisto, le transazioni digitali sono ormai parte della nostra vita quotidiana e si stanno via via diffondendo. L’affidabilità è una componente cruciale. Lo storage di denaro, oltre che di dati personali, può essere più comodo e anche più sicuro.</p>"
+          'description' => "Save money on a vaste set of products and services selected by QUI! Group",
+          "benefits" => "<p>Access to services, pay for a subscription or a product, digital transactions are nowadays parts of our life and they are increasing. Security is a crucial aspect. Money and personal data storage can be more comfortable and safe.</p>"
           ]);
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);

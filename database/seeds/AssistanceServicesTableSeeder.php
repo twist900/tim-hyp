@@ -16,55 +16,47 @@ class AssistanceServicesTableSeeder extends Seeder
         $serviceTaxon = App\Taxon::where('name', 'Gestione linea e servizi')->first();
 
         $service = new App\AssistanceService([
-          'name' => 'Attivazione linea di casa',
-          'description' => "<p>Richiedere l’attivazione di una linea telefonica di casa è molto semplice, puoi:</p><ul><li>richiederla <a>online</a></li><li>chiamare&nbsp;il Servizio Clienti linea fissa&nbsp;187</li><li>recarti&nbsp;presso un Negozio TIM.</li></ul><p>Verifica la modalità di attivazione consultando on line le varie offerte disponibili.</p>",
-          "how_to_acquire" => "<p>I dati necessari sono:</p><ul><li>nome e cognome</li><li>codice fiscale</li><li>indirizzo dell'abitazione per cui richiedi l'installazione della linea</li><li>un recapito telefonico di cellulare</li><li>indirizzo email (facoltativo).</li></ul><p>Il nostro personale tecnico ti contatterà quanto prima per concordare l’appuntamento per l’installazione dell’impianto telefonico.</p>"
+          'name' => 'Home line activation',
+          'description' => "<p>Asking for the activation of a new line for your home is really easy! You can:</p><ul><li>ask online</li><li>call&nbsp;the Home Line Customer Service&nbsp;187</li><li>go&nbsp;in a TIM Store.</li></ul><p>Verify activation method consulting the available offers online.</p>",
+          "how_to_acquire" => "<p>Required information:</p><ul><li>name and surname</li><li>tax code</li><li>address where the line will be activated</li><li>a mobile phone number</li><li>email address (optional).</li></ul><p>Our technical support will contact you as soon as possible to arrange the meeting to install the line.</p>"
           ]);
 
         $serviceTaxon->assistanceServices()->save($service);
 
         $service = new App\AssistanceService([
-          'name' => 'Trasloco',
-          'description' => "<p>Il trasloco è un'operazione che ti consente di spostare la tua linea telefonica presso una nuova abitazione, nella stessa città o in una città diversa. Puoi gestirla direttamente online basta registrarsi all’Area Clienti.</p>"
+          'name' => 'Line moving',
+          'description' => "<p>Line moving permits you to move your telephone line to a new home, in the same city or in a different city. You can manage it online, you just need to register to Clients Area.</p>"
           ]);
 
         $serviceTaxon->assistanceServices()->save($service);
 
         $service = new App\AssistanceService([
-          'name' => 'Disattivare i servizi di linea fissa',
-          'description' => "<p><a>Registrandoti</a> alla nostra Area Clienti puoi gestire autonomamente la cessazione dei servizi attivi sulla tua linea telefonica; una volta entrato naviga all’interno de “La mia Linea”-“Servizi e Offerte Attivi” oppure su “il Mio Conto” all’interno del “Dettaglio Costi” della fattura.</p><p>I servizi che puoi disattivare sono i seguenti:</p><ul>  <li>Payforme: è un servizio attivo di default che puoi disattivare nella sezione “La mia Linea” - “Riepilogo”. Clicca <a>qui</a> per disabilitare.</li>  <li>Chi è : servizio che ti consente di visualizzare sul display del tuo telefono predisposto il numero di chi ti sta chiamando, da rete fissa o da rete mobile. Clicca <a>qui</a> per disabilitare</li>  <li>Memotel: <strong>la&nbsp;segreteria telefonica che puoi attivare sulla tua linea di casa</strong>.</li> <li>Trasferimento di chiamata: il servizio che ti consente di trasferire anche sul tuo cellulare le chiamate in arrivo al tuo numero di casa.</li>  <li>Ultima chiamata persa:componendo il 42400 dal telefono fisso puoi conoscere l'ultimo numero, sia fisso che mobile che ti ha chiamato, la data e l’ora.</li></ul>"
-          ]);
-
-        $serviceTaxon->assistanceServices()->save($service);
-
-        $service = new App\AssistanceService([
-          'name' => 'Disattivare i servizi di linea fissa',
-          'description' => "<p><a>Registrandoti</a> alla nostra Area Clienti puoi gestire autonomamente la cessazione dei servizi attivi sulla tua linea telefonica; una volta entrato naviga all’interno de “La mia Linea”-“Servizi e Offerte Attivi” oppure su “il Mio Conto” all’interno del “Dettaglio Costi” della fattura.</p><p>I servizi che puoi disattivare sono i seguenti:</p><ul>  <li>Payforme: è un servizio attivo di default che puoi disattivare nella sezione “La mia Linea” - “Riepilogo”. Clicca <a>qui</a> per disabilitare.</li>  <li>Chi è : servizio che ti consente di visualizzare sul display del tuo telefono predisposto il numero di chi ti sta chiamando, da rete fissa o da rete mobile. Clicca <a>qui</a> per disabilitare</li>  <li>Memotel: <strong>la&nbsp;segreteria telefonica che puoi attivare sulla tua linea di casa</strong>.</li> <li>Trasferimento di chiamata: il servizio che ti consente di trasferire anche sul tuo cellulare le chiamate in arrivo al tuo numero di casa.</li>  <li>Ultima chiamata persa:componendo il 42400 dal telefono fisso puoi conoscere l'ultimo numero, sia fisso che mobile che ti ha chiamato, la data e l’ora.</li></ul>"
+          'name' => 'Deactivate home line services',
+          'description' => "<p>Registering to our Clients Area permits you to autonomously deactivate your home line's active services; once registered navigate to “My line”-“Active services and offers” or to “My Account” inside invoice's “Costs Detail”.</p><p>You can deactivate the following services:</p><ul>  <li>Payforme: it's an active service by default that you can deactivate in “My Line” - “Overview”. </li>  <li>Who is: the service that let you see the caller number on your phone's display, from home line or mobile.</li>  <li>Memotel: <strong>&nbsp;The voicemail for your home line</strong>.</li> <li>Call transfer: the service to transfer to your mobile phone incoming calls from your home line.</li>  <li>Last missed call: calling 42400 from your home telephone you can check number, date and time of your last missed call.</li></ul>"
           ]);
 
         $serviceTaxon->assistanceServices()->save($service);
 
 
         $service = new App\AssistanceService([
-          'name' => 'Passaggio da abbonamento a ricaricabile',
-          'description' => "<p>Per&nbsp;<strong>passare la tua utenza TIM da abbonamento a servizio ricaricabile</strong>&nbsp;puoi compilare il modulo di “<strong>Richiesta di migrazione da abbonamento a ricaricabile</strong>”. Il modulo è disponibile in formato pdf nella sezione&nbsp;<a><strong>Moduli</strong></a> e può essere scaricato direttamente dalla sottosezione “<strong>clienti con abbonamento</strong>”.<br />Potrai inviare il modulo compilato con la richiesta di cessazione del contratto di abbonamento e la specificata volontà di passare verso servizio ricaricabile (indicando il profilo e l'eventuale opzione) e la modalità di rimborso&nbsp;<strong>ACI</strong>&nbsp;(assegno/accredito su linea ricaricabile), al numero di fax dedicato&nbsp;<strong>800600119</strong>.</p><p>Puoi effettuare il passaggio scrivendoci o in alternativa presso un qualsiasi&nbsp;<a>Negozio TIM</a>.</p>"
+          'name' => 'Change from contract to prepaid',
+          'description' => "<p>To&nbsp;<strong>change your TIM mobile line from contract to prepaid</strong>&nbsp;you can fill the form of “<strong>Migration request from Contract to Prepaid</strong>”. The form is available in pdf format in the section &nbsp;<strong>Modules</strong> and can be downloaded in the section “<strong>contracts clients</strong>”.<br />You can send the filled form at the fax number &nbsp;<strong>800600119</strong>.</p><p>You can do this operation writing us or in every TIM Store.</p>"
           ]);
 
         $serviceTaxon->assistanceServices()->save($service);
 
 
         $service = new App\AssistanceService([
-          'name' => "All'estero con TIM",
-          'description' => "Usare il telefonino all’estero è facilissimo!
-            Tutti i clienti TIM con una linea ricaricabile e con un abbonamento sono automaticamente abilitati a chiamare,ricevere
-            telefonate, inviare e ricevere SMS dall’estero. Ed è facile come in Italia!"
+          'name' => "Abroad with TIM",
+          'description' => "Using your phone abroad has never been easier!
+            All TIM clients with a prepaid or a contract are automatically able to call, receive calls, send and receive SMS from abroad. And it's easy like in Italy!"
           ]);
 
         $serviceTaxon->assistanceServices()->save($service);
 
         $service = new App\AssistanceService([
-          'name' => "Verifica il credito residuo mentre sei all'estero",
-          'description' => "<p>Quando sei all’estero puoi controllare il credito residuo della tua ricaricabile TIM attraverso le seguenti modalità:</p><ul><li>Se il gestore locale supporta il servizio di <strong><a>Chiamata Diretta</a></strong>, puoi <strong>chiamare il 40916</strong> anche se sei a credito zero.</li><li>Se hai ancora credito residuo puoi utilizzare il servizio <strong>40916 tramite SMS</strong> inviando un messaggio gratuito al <strong>40916</strong> con la sintassi '<strong>CREDITO</strong>'.</li><li>Direttamente da pc online entrando nella sezione <strong><a>MyTIM Mobile</a></strong>.</li><li>Dal telefonino sul sito <strong><a>TIM.it</a></strong> ottimizzato per il tuo smartphone, oppure attraverso l’<strong><a>App MyTIM Mobile</a></strong>, attualmente disponibile in download gratuito nelle versioni per <a><strong>iPhone</strong></a> e per <a><strong>smartphone con sistema operativo Android</strong></a>. Se vuoi sapere quanto costa navigare in Internet quando sei all'estero, puoi consultare la sezione <strong><a>costi della navigazione in Internet col telefonino o col pc</a></strong>. In questo caso infatti, per la visualizzazione delle informazioni, sosterrai i costi e le condizioni normalmente applicate al traffico dati in roaming.</li><li>Infine dall'estero, è possibile verificare il proprio credito digitando <strong>*123# seguito da INVIO</strong> laddove il gestore locale consenta questo servizio. Dopo alcuni istanti comparirà l'ammontare del tuo credito residuo direttamente sul display del telefonino.</li></ul>"
+          'name' => "Check your credit abroad",
+          'description' => "<p>When you are abroad you can check your TIM prepaid credit in these ways:</p><ul><li>you can <strong>call 40916</strong> also if you have no more credit left.</li><li>If you still have credit left you can use the service<strong>40916 by SMS</strong> sending a free message to <strong>40916</strong> with the string '<strong>CREDIT</strong>'.</li><li>Directly from pc online in the section <strong>MyTIM Mobile</strong>.</li><li>From your mobile on <strong>TIM.it</strong> optimized for your smartphone, or by <strong>MyTIM Mobile App</strong>, freely available for <strong>iPhone</strong> and <strong>Android</strong>. If you want to know prices for internet abroad, check the section <strong>costs to surf the internet with your phone or pc</strong>.</li><li>As last option, you can check your credit from abroad typing <strong>*123# followed by enter</strong> if the local provider supports this service. After some moments your credit will appear on your phone's display.</li></ul>"
           ]);
 
         $serviceTaxon->assistanceServices()->save($service);
@@ -74,36 +66,36 @@ class AssistanceServicesTableSeeder extends Seeder
       $serviceTaxon = App\Taxon::where('name', 'Controlla costi e pagamenti')->first();
 
       $service = new App\AssistanceService([
-        'name' => "Come leggere la fattura della linea fissa",
-        'description' => "La fattura della linea fissa è semplice e facile da leggere perché disegnata prendendo spunto dai suggerimenti dei clienti. La veste grafica, moderna e raffinata, utilizza un linguaggio sempre più chiaro per l’esposizione delle voci di spesa, facilitando la lettura di tutte le informazioni di cui hai bisogno e garantendo maggiore trasparenza nei contenuti e negli importi."
+        'name' => "How to read home line's invoice",
+        'description' => "Home line's invoice is easy to read since we designed it starting from clients' suggestions. The modern graphic design use a clear language to show costs detail, helping reaching all the information you need and granting high transparency in contents and costs."
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Verifica credito residuo e bonus disponibili per i clienti Prepagati",
-        'description' => "Scopri come consultare le informazioni relative al credito residuo, alle offerte e ai bonus attivi sulla tua linea."
+        'name' => "Check credit and bonus available for prepaid clients",
+        'description' => "Find out how to consult information about credit, offers and active bonus on your line."
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Dettaglio delle chiamate per Clienti Ricaricabili",
-        'description' => "<p>Il servizio '<strong>documentazione traffico</strong>' ti offre la possibilità di avere il dettaglio di ogni telefonata, connessione dati o altro evento, effettuato dalla tua linea (*). Per ogni evento viene fornita l’indicazione della data/ora di effettuazione, del costo, della tipologia e del numero chiamato se si tratta di traffico voce o sms (con le ultime tre cifre asteriscate - L. 171/98 'Tutela vita privata nelle telecomunicazioni').&nbsp;<br /><br /><strong>La documentazione del traffico è sempre disponibile in </strong><a><strong>MyTIM Mobile</strong></a> e consultabile fino a due mesi antecedenti la data di consultazione del traffico se utilizzi una linea ricaricabile, in diversi formati facilmente consultabili ed archiviabili (esempio pdf).&nbsp;<br /><br />È comunque possibile richiedere l’invio di un tabulato cartaceo del traffico pregresso (equivalente al pdf già disponibile in MyTIM Mobile), o l’invio di un tabulato del traffico pregresso in chiaro (deve essere in questo caso specificato),&nbsp;purché rientri nei periodi sopra indicati.&nbsp;In questo caso dovrai compilare ed inviare l'apposito modulo di 'Richiesta Documentazione Traffico' che puoi scaricare in formato pdf dalla sezione&nbsp;<a ><strong>Moduli</strong></a>, selezionando la sottosezione Ricaricabile di riferimento.&nbsp;<br />&nbsp;</p><p><br />(*) alcune tipologie di traffico, per cui non è previsto un costo, possono non essere documentate.</p>"
+        'name' => "Calls detail for prepaid clients",
+        'description' => "<p>The service '<strong>traffic documentation</strong>' gives you the possibility to have the detail of each call, data connection or other event, coming from your line. For each event you will be able to check date and time, cost, type and called number if it's a phone call or a sms.<br /><br /><strong>Traffic documentation is always available in </strong><strong>MyTIM Mobile</strong> and you can access traffic information of up to two months before in different formats (for example pdf).&nbsp;<br /><br /></p>"
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Scopri come consultare i consumi della tua linea con abbonamento",
-        'description' => "Puoi consultare i consumi del tuo Abbonamento direttamente online, chiamando il numero gratuito 40915 o navigando da telefonino. Scopri come."
+        'name' => "Find out how you can check costs of your contract line",
+        'description' => "You can check your contract expenses directly online, calling the free number 40915 or from your phone with the TIM App."
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Modalità di pagamento della fattura linea mobile",
-        'description' => "Pagare la fattura è sempre più semplice e veloce. Scopri tutti i servizi che TIM ha pensato per te e per la tua linea con abbonamento."
+        'name' => "Payment methods for the mobile invoice",
+        'description' => "Paying the invoice is easy and fast. Find out all the services that TIM thought for you and your contract line."
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
@@ -112,36 +104,36 @@ class AssistanceServicesTableSeeder extends Seeder
       $serviceTaxon = App\Taxon::where('name', 'Supporto tecnico e configurazione')->first();
 
       $service = new App\AssistanceService([
-        'name' => "Assistenza tecnica specializzata con SOSsmartphone",
-        'description' => "<p><strong>SOSsmartphone</strong>&nbsp;è il servizio di TIM per tutti i clienti,&nbsp;Ricaricabili o con Abbonamento, che permette di ricevere un’assistenza tecnica specializzata e personalizzata per la gestione del proprio smartphone o tablet.</p><p>Grazie al servizio&nbsp;<strong>SOSsmartphone</strong>&nbsp;potrai parlare con un esperto che ti fornirà tutta la consulenza e l’assistenza “premium” di cui necessiti e che soprattutto sarà in grado di connettersi in remoto ed operare direttamente sul tuo dispositivo.</p><p>I servizi che potrai ricevere con&nbsp;<strong>SOSsmartphone</strong>&nbsp;sono:</p><ul>  <li>supporto per trasferimento dati in caso di cambio telefono: esempio trasferimento rubrica, foto, sms;</li>  <li>consulenza nell’utilizzo delle funzioni avanzate dello smartphone;</li> <li>assistenza specialistica sulle configurazioni avanzate dello smartphone e integrazione nella tua rete domestica;</li> <li>gestione e sincronizzazione dei tuoi contenuti multimediali;</li> <li>supporto per garantire il massimo della sicurezza;</li> <li>conservazione e protezione dei tuoi dati;</li>  <li>trasferimento di contenuti;</li>  <li>aggiornamento del tuo smartphone;</li>  <li>effettuazione check up.</li></ul><p><br />Per richiedere il servizio&nbsp;<strong>SOSsmartphone</strong>&nbsp;potrai:</p><ul> <li>contattare il numero&nbsp;<strong>0458214811</strong>&nbsp;(chiamata a pagamento in base al proprio piano tariffario/offerta);</li> <li>scaricare l’<strong>App SOS Smartphone</strong>&nbsp;da APP Store (per iOS) e Google Play (per Android) e richiedere l’intervento.</li></ul><p>Il servizio SOSsmartphone prevede un costo&nbsp;<strong>ad intervento</strong>&nbsp;a partire da 3€ (IVA inclusa). L’importo sarà addebitato in fattura se sei un cliente con Abbonamento mentre sarà scalato dal credito residuo se sei un cliente Ricaricabile.<br />Dal 12 maggio inoltre il servizio SOSsmartphone&nbsp;è disponibile anche&nbsp;<strong>in abbonamento</strong>&nbsp;a 2€/mese. In questo modo avrai l’assistenza di cui hai bisogno sempre disponibile e completa per un anno.<br /><br />Per approfondimenti sul SOSsmartphone&nbsp;<a><strong>clicca qui</strong></a><strong>.</strong></p><p>Ti ricordiamo che nell’area&nbsp;<strong>Assistenza</strong>&nbsp;del sito TIM.it sono a tua disposizione tutte le guide per le configurazioni di smartphone, tablet e chiavette che ti consentiranno, in completata autonomia, di configurare il tuo telefonino a tutti i servizi TIM. Per accedere&nbsp;<a><strong>Clicca qui</strong></a> e seleziona la marca ed il modello di tuo interesse.</p>"
+        'name' => "Specialized tecnichal support with SOSsmartphone",
+        'description' => "<p><strong>SOSsmartphone</strong>&nbsp; is the TIM service for all clients that permits you to obtain a specialized tecnichal support for your smartphone or tablet.</p><p>Thanks to &nbsp;<strong>SOSsmartphone</strong>&nbsp; service you can talk to an expert that will give you all the “premium” help you need and most of all it will be able to remotely connect to your device to solve the problem.</p><p>Services you can recive with &nbsp;<strong>SOSsmartphone</strong>&nbsp;are:</p><ul>  <li>support for data transfer in case of telephone change: contacts, photos, sms;</li>  <li>help to use your phone's advanced options;</li> <li>specialized assistance on smartphone's advanced configurations and connection to your home line;</li> <li>managing and synconization of your multimedia contents;</li> <li>support to grant maximum security;</li> <li>protection of your data;</li>  <li>contents transfer;</li>  <li>software updates for your smartphone;</li>  <li>check up.</li></ul><p><br />To ask for &nbsp;<strong>SOSsmartphone</strong>&nbsp; service you can:</p><ul> <li>contact the number&nbsp;<strong>0458214811</strong>&nbsp;;</li> <li>Download <strong>SOS Smartphone App</strong>&nbsp;from APP Store (iOS) and Google Play (Android) and ask for support.</li></ul><p>SOSsmartphone is a paid service&nbsp;<strong>ad intervento</strong>&nbsp;starting from 3€.</p>"
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Buono sconto per cambio telefono",
-        'description' => "<p>Vuoi un nuovo smartphone?</p><p>Portaci il tuo vecchio telefono,&nbsp;<strong>da oggi vale uno sconto sul nuovo</strong>!</p><p>Con il servizio&nbsp;<strong>TIM Valuta</strong>&nbsp;puoi far valutare gratuitamente e senza impegno il tuo telefonino, smartphone o tablet. &nbsp;<strong>Ricevi subito uno sconto</strong>&nbsp;da utilizzare come meglio desideri: per l’acquisto di un nuovo&nbsp;<strong>telefonino</strong>,&nbsp;<strong>smartphone</strong>, <strong>tablet</strong>,&nbsp;<strong>chiavetta</strong>,&nbsp;<strong>Internet Pack</strong>, oppure in&nbsp;<strong>Ricarica</strong>&nbsp;<strong>telefonica TIM</strong>. Il servizio è aperto a tutti!</p><p><br />Far valutare il telefono è molto semplice. E’ sufficiente:</p><p>•&nbsp;portare presso uno dei&nbsp;<a><strong>negozi TIM</strong></a> che aderiscono all’iniziativa il tuo vecchio telefono, smartphone o tablet<br />• l’addetto del negozio procederà alla valutazione del prodotto, verificandone le condizioni e lo stato d’uso<br />• se accetti la valutazione, riceverai uno sconto di pari valore che potrai utilizzare subito per l’acquisto di un nuovo smartphone, tablet, oppure Ricariche telefoniche TIM.</p><p>Per&nbsp;maggiori informazioni sul servizio&nbsp;<a><strong>Clicca qui</strong></a></p>"
+        'name' => "Discount to change your phone",
+        'description' => "<p>Do you want a new smartphone?</p><p>Bring us your old phone,&nbsp;<strong>from today you will have a discount on a new one</strong>!</p><p>With&nbsp;<strong>TIM Valuta</strong>&nbsp; service you can obtain a free evaluation of your phone, smartphone or tablet. &nbsp;<strong>Receive a discount immediately</strong>&nbsp;to use as you wish: to buy a new&nbsp;<strong>phone</strong>,&nbsp;<strong>smartphone</strong>, <strong>tablet</strong>,&nbsp;<strong>internet key</strong>,&nbsp;<strong>Internet Pack</strong>, or in&nbsp;<strong>credit</strong>&nbsp;.The service is open to everyone!</p><p><br />Getting the evaluation is easy. You just need to:</p><p>•&nbsp;bring to one of the&nbsp;<strong>TIM Store</strong> your old phone, smartphone or tablet<br />• The shop personnel will evaluate the product,  prodotto<br />• If you accept the proposed evaluation, you will get the discount and you can use it immediately!</p>"
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Configurazione Mail su iPhone",
-        'description' => "<p>Nelle <strong>Impostazioni</strong>:</p><ul> <li>scegli la voce <strong>Posta, contatti, calendari</strong></li> <li>quindi <strong>Aggiungi account... </strong></li> <li>dall'elenco dei provider vai su <strong>Altro</strong>:</li></ul>"
+        'name' => "Mail configuration on iPhone",
+        'description' => "<p>In <strong>Settings</strong>:</p><ul> <li>choose <strong>Mail, contacts, calendars</strong></li> <li>then <strong>Add account... </strong></li> <li>from provider list go to <strong>Others</strong></li></ul>"
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Connettersi a Internet col telefonino",
-        'description' => "<p>Normalmente i telefoni commercializzati da TIM sono già predisposti per il collegamento&nbsp;<strong>Internet</strong>&nbsp;in maniera automatica, altrimenti dovrai eseguire la procedura di configurazione del servizio.&nbsp;<br />Di seguito i passi da effettuare per capire se il tuo telefonino è configurato:</p><ul><li><strong>Se hai un telefonino TIM</strong>, ti basterà cliccare sull’<strong>icona&nbsp;del Browser Internet</strong>;</li><li><strong>Se invece non hai un telefonino TIM</strong>, ti basterà cliccare sull’icona del Browser Internet e digitare l'indirizzo&nbsp;<strong>wap.tim.it</strong>"
+        'name' => "Connect to the internet with your phone",
+        'description' => "<p>Normally phone sold by TIM are already configured to connect to the internet&nbsp;<strong>Internet</strong>&nbsp;automatically, otherwise you'll have to follow the procedure to configure the service.&nbsp;<br />This procedure will let you check if the configuration is correct on your phone:</p><ul><li><strong>If you have a TIM phone</strong>, you just have to click on the <strong>Internet Browser icon</strong>;</li><li><strong>If instead you don't own a TIM phone</strong>, you just have to click on the Internet Browser icon and go to the address&nbsp;<strong>wap.tim.it</strong>"
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "TIM Mail - Password dimenticata o altri problemi di accesso",
-        'description' => "L’accesso al servizio TIM Mail è possibile tramite web o con programmi di posta (ad es. MS Outlook) inserendo indirizzo email (@tim.it o @alice.it) e la relativa password.Può però succedere di dimenticare la password o di incorrere in altri problemi di accesso, come ad esempio l’account di posta bloccato per motivi di sicurezza e/o sospetto furto di credenziali.Se hai impostato un’opzione di recupero credenziali, puoi facilmente recuperare online la tua username o reimpostare la tua password. Per sapere come fare, consulta la nostra guida al recupero di username e password."
+        'name' => "TIM Mail - Password renewal or other access problems",
+        'description' => "Access to TIM mail is possible from the web or through email clients filling the email address (@tim.it or @alice.it) and the password. If you forget your password, you can easily set a new one. To know how read our guide to get back username and password."
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
@@ -149,36 +141,36 @@ class AssistanceServicesTableSeeder extends Seeder
       $serviceTaxon = App\Taxon::where('name', 'Smart Life Services')->first();
 
       $service = new App\AssistanceService([
-        'name' => "Cos’è TIMgames",
-        'description' => "<p>TIMgames è servizio TIM edicato al gaming che consente a tutti i clienti di scaricare su tablet e smartphone i migliori giochi on demand e in abbonamento per il mondo mobile.</p><p>Con TIMgames avrai a disposizione una library di oltre 1500 giochi, aggiornata ogni settimana con nuovi titoli e giochi in offerta presenti nell’area promozioni dello store.</p><p>TIMgames èaccessibile sia da App (scaricabile da Google Play) che da browser su <u><a >www.timgames.i</a></u><a><u>t</u></a> L’utente può scegliere la modalità di acquisto preferita tra on demand e abbonamento.</p><p>In particolare:</p><ul><li><p>On demand: a partire da 0,49€, acquistando e scaricando un gioco sul proprio telefonino;</p></li><li><p>In abbonamento: con I Love Games Promo, a soli 2€ a settimana si possono scaricare senza limiti tutti i giochi presenti su TIMgames. Il primo mese è in promozione a solo 1€ a settimana.</p></li></ul>"
+        'name' => "What is TIMgames",
+        'description' => "<p>TIMgames is the TIM gaming service that permits to each client to download on smartphones and tablets the best games on demand for mobile devices.</p><p>With TIMgames you'll always have available a library of more than 1500 games, updated every week with new titles and discounted games in the store.</p><p>TIMgames is available both on the App and on the browser on <u><www.timgames.it</u>. The user can choose the preferred payment method between on demand and contract.</p><p>In particular:</p><ul><li><p>On demand: starting from 0,49€;</p></li><li><p>Contract: with I Love Games Promo, for just 2€ per week you can download limitless all games present on TIMgames. Fist month in discount at just 1€ per week.</p></li></ul>"
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Tutti i modi per abbonarsi",
-        'description' => "<p>Con TIMgames hai la possibilità di scegliere tutti i giochi che vuoi per il tuo telefonino in due semplici modalità:</p><ul> <li>On demand: basta accedere al sito mobile <a>www.timgames.it</a> oppure dall’App TIMgames e scegliere tutti i giochi presenti. Il prezzo è indicato accanto ad ogni titolo. Inoltre, all’interno della sezione promozioni, troverai molti giochi da provare gratuitamente prima di effettuare l’acquisto;</li> <li>Abbonamento: per attivare I Love Games Promo, a soli 2€ a settimana in promo a metà prezzo per il primo mese, puoi andare in qualsiasi negozio TIM, chiamare il 119, il 409167 oppure tramite il sito tim.it</li></ul>In entrambi i casi, accedendo alla sezione MyTIMgames, potrai visualizzare tutti i giochi scaricati e gestire gli abbonamenti sottoscritti."
+        'name' => "All methods to sign up",
+        'description' => "<p>With TIMgames you can choose all the games you want with two simple methods:</p><ul> <li>On demand: just access to the mobile website www.timgames.it or from TIMgames App and choose all games. Inside the outlet area, you will find many games to try for free before buying;</li> <li>Contract: to activate I Love Games Promo, for just 2€ per week, you can go to every TIM Store, call 119, call 409167 or through tim.it</li></ul>In both cases, going in the section MyTIMgames, you will be able to see all the downloaded games and manage the active contract subsciptions."
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Come accedere a TIMgames",
-        'description' => "<p>Puoi accedere al servizio TIMgames nei seguenti modi:</p><p><u>Smartphone e Tablet Android</u>:</p><ul>  <li>Sito mobile <a>www.timgames.it</a></li> <li>App TIMgames scaricabile da Google Play;</li></ul><p>N.B.: Con l’abbonamento I love Games promo attivo puoi <u>scaricare</u> da TIMgames tutti i giochi che vuoi sul tuo Smartphone/Tablet.</p><p><u>Apple e Windows Phone</u>:</p><ul> <li>Sito mobile <a>www.timgames.it</a></li></ul><p>N.B.: Con l’abbonamento I love Games promo attivo puoi <u>accedere</u> a TIMgames e giocare a tutti i giochi che vuoi con il tuo Smartphone/Tablet.</p><p>Con TIMgames è molto semplice giocare, il tuo Smartphone/Tablet vengono riconosciuti in automatico e visualizzi solo i giochi compatibili.</p>"
+        'name' => "How to access TIMgames",
+        'description' => "<p>You can access TIMgames service in the following ways:</p><p><u>Smartphone and Tablet Android</u>:</p><ul>  <li>Mobile website www.timgames.it</li> <li>TIMgames App from Google Play;</li></ul><p><u>Apple and Windows Phone</u>:</p><ul> <li>Mobile website www.timgames.it</li></ul><p>With TIMgames playing it's easy, your smartphone/tablet is automatically recognized and you will see only compatible games.</p>"
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Conoscere l’App TIMgames",
-        'description' => "<p>Navigare e scegliere i giochi preferiti all’interno di TIMgames è semplice e intuitivo.</p><p>All’interno della Home Page, in alto, troverai gli abbonamenti disponibili per il tuo telefonino. Scorrendo la pagina verso il basso, avrai a disposizione tutti i giochi on demand. All’intero della sezione “prova gratis”, potrai inoltre provare tutti i giochi vuoi prima di acquistarli.</p>"
+        'name' => "Getting to know TIMgames App",
+        'description' => "<p>Navigate and choose between your favorite games inside TIMgames is easy and intuitive.</p><p>Inside the home page, at the top, you will find the available contracts for your phone. Scrolling down the page you'll have all the on demand games. Inside the “try for free” section, you can try all the games you want before buying them.</p>"
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);
 
       $service = new App\AssistanceService([
-        'name' => "Come vedere i propri abbonamenti",
-        'description' => "<p>Per visualizzare il proprio abbonamento, puoi:</p><ul> <li>entrare su <a>www.timgames.it</a> e cliccare su MyTIMgames. &nbsp;All’interno della sezione “gestione abbonamenti” troverai tutti i dettagli del servizio da te sottoscritto;</li>  <li>entrare nell’Area clienti del sito tim.it e cliccare poi nella sezione “opzioni”</li> <li>oppure chiamare il 40916 e consultare le opzioni attive sul proprio profilo.</li></ul>"
+        'name' => "How to check your contract",
+        'description' => "<p>To check your contract, you can:</p><ul> <li>access www.timgames.it and click on MyTIMgames. &nbsp;Inside the section “manage contract” you'll find all the details of your subscription;</li>  <li>Access Clients Area on tim.it and click in the “options” section</li> <li>or call 40916 and check the activated options on your profile.</li></ul>"
         ]);
 
       $serviceTaxon->assistanceServices()->save($service);

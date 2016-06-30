@@ -32,8 +32,8 @@
     <div class="category-tab shop-details-tab"><!--category-tab-->
       <div class="col-sm-12">
         <ul class="nav nav-tabs">
-          <li ><a href="#details" data-toggle="tab">DESCRIZIONE</a></li>
-          <li class="active"><a href="#specs" data-toggle="tab">SPECIFICHE TECNICHE</a></li>
+          <li ><a href="#details" data-toggle="tab">DESCRIPTION</a></li>
+          <li class="active"><a href="#specs" data-toggle="tab">TECNICHAL SPECIFICATIONS</a></li>
         </ul>
       </div>
       <div class="tab-content">

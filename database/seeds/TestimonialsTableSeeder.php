@@ -16,20 +16,20 @@ class TestimonialsTableSeeder extends Seeder
         App\Testimonial::create([
             'firstname' => 'Marco',
             'lastname' => 'Leone',
-            'content' => 'Copertura sempre presente,ho trovato sempre operatori al 119, rapidi nel capirmi ed estremamente cortesi.Profilo tariffario mensile soddisfacente.Ho sempre trovato molta professionalità e tanta gentilezza.Grazie Tim'
+            'content' => 'Coverage always present, I always found prepared people at 119, fast in understanding me and extremely polite. Satisfying monthly charge. I have always found lot of professionalism and kindness. Thanks TIM!'
         ]);
 
         App\Testimonial::create([
             'firstname' => 'Francesco',
             'lastname' => 'Pariso',
-            'content' => 'Sono cliente da 9 anni e non ho mai avuto problemi, ne come assistenza (ho pure avuto un rimborso a causa di un loro errore) ne come qualità. Prende ovunque, io abito in una zona di montagna e mi collego in 4G! Perfino nella metro in centro arrivo a fare una chiamata. La qualità si paga del resto.'
+            'content' => 'I have been a TIM client for 9 years and I never had problems, both with assistance (I even had a refund for an error they made) and quality. I always have signal, I live in the mountains and I have 4G! I can call even in the underground downtown. You have to pay for quality.'
         ]);
 
 
         App\Testimonial::create([
           'firstname' => 'Andrea',
           'lastname' => 'Bassoleni',
-          'content' => 'Ho attivato internet ADSL a volte è lenta e sotto la soglia contratto. Tim per i prossimi 4 mesi mi sconta il 50% in bolletta e mi da 15 GB di internet con scheda sim. Servizio clienti cordiale e disponibile.'
+          'content' => 'I activated ADSL internet, and sometimes it is slower then the agreement in the contract. For the next 4 months I will have a 50% discount in the invoice plus 15GB of internet with a SIM card. Customer care is kind and always available.'
         ]);
     }
 }

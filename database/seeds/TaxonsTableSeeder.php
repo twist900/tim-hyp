@@ -39,16 +39,16 @@ class TaxonsTableSeeder extends Seeder
             'name' => 'Smart Life',
             'children' => [
               ['name' => 'TV & Entertainment',
-                'short_description' => 'SERIE TV, FILM, MUSICA, LIBRI, GIOCHI E CALCIO. Scopri il tipo di intrattenimento che preferisci. Il divertimento comincia subito! Quando vuoi e come vuoi.',
+                'short_description' => 'TV SHOWS, MOVIES, MUSIC, BOOKS, GAMES AND FOOTBALL. Find out the entertainment you prefer. Fun starts now! Whenever and however you want.',
                 'icon' => 'https://img.tim.it:443/sdr/01_Intrattenimento_0.png'],
               ['name' => 'Salute e benessere',
-                'short_description' => 'Prova gli ultimi wearables. Scopri come salute e benessere possono cambiare in meglio la tua vita. Libera la tua voglia di movimento. Condividi con gli amici i tuoi risultati. Il futuro è smart.',
+                'short_description' => 'Try last wearables devices. Find out how health and wellnes can change your life for the best. Free your desire to move. Share your results with friends. The future is smart.',
                 'icon' => 'https://img.tim.it:443/sdr/02_icona_salute_benessere.png'],
               ['name' => 'Casa e Famiglia',
-                'short_description' => 'Smart Life vuol dire anche una vita più semplice e sicura. Anche per la tua casa e i tuoi cari.',
+                'short_description' => 'Smart Life means also a simpler and more secure life. Also for your home and your loved ones.',
                 'icon' => 'https://img.tim.it:443/sdr/03_casa_famiglia_v2.png'],
               ['name' => 'Servizi alla persona',
-                'short_description' => 'Un nuovo approccio al mondo dell’ e-payment e dell’identità digitale. Potrai organizzare e gestire con semplicità e in tutta sicurezza i tuoi pagamenti digitali, il tuo archivio personale.',
+                'short_description' => 'A new approach to the e-payment and digital identity world. You will be able to organize and manage with ease and safely your digital payments, your personal archive.',
                 'icon' => 'https://img.tim.it:443/sdr/04_identita_payment.png'
               ]
             ]
