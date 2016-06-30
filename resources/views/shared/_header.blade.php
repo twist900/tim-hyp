@@ -26,7 +26,7 @@
                       @foreach( $rootTaxon->descendants as  $childTaxon )
                        <li>
                           <div class="taxon-title">
-                              @if( File::exists(public_path($childTaxon->icon->url())) )
+                              @if( $childTaxon->icon->originalFilename() )
                                 <img class="taxon-title-image"  src="{{ $childTaxon->icon->url('thumb') }}">
                               @endif
 

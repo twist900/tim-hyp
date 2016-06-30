@@ -26,7 +26,7 @@
                       <?php foreach( $rootTaxon->descendants as  $childTaxon ): ?>
                        <li>
                           <div class="taxon-title">
-                              <?php if( File::exists(public_path($childTaxon->icon->url())) ): ?>
+                              <?php if( $childTaxon->icon->originalFilename() ): ?>
                                 <img class="taxon-title-image"  src="<?php echo e($childTaxon->icon->url('thumb')); ?>">
                               <?php endif; ?>
 
