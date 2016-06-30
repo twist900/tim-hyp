@@ -1433,7 +1433,7 @@ ul.sub-menu {
 
 .footer-bottom {
   background: #004990;
-  padding-top: 10px;
+  margin: 0 auto;
 }
 
 .footer-bottom p {
@@ -1468,6 +1468,9 @@ ul.sub-menu {
 }
 
 .item {
+  display: flex;
+  align-items: center
+  justify-content: center;
   padding-left: 100px;
 }
 
@@ -1478,8 +1481,21 @@ ul.sub-menu {
   top: 52%;
 }
 
-.girl {
-  margin-left: 0;
+.offer-image {
+  display: flex;
+  justify-content: center;
+     /* align horizontal */
+  align-items: center;
+
+     /* align vertical */
+   /*  border: 1px solid green;*/
+  height: 80%;
+
+}
+
+.offer-image img{
+  width: 220px;
+  height: auto;
 }
 
 .item h1 {

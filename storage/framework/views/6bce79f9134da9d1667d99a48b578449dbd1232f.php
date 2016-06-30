@@ -13,9 +13,6 @@
           <?php endif; ?>
         </div>
 
-
-
-
       </div>
       <div class="col-sm-7">
         <div class="product-information"><!--/product-information-->
