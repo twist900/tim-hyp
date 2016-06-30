@@ -21,12 +21,12 @@ class CompaniesTableSeeder extends Seeder
     {
       DB::table('companies')->truncate();
 
-      $this->createCompaniesForTaxon('All%20Cell%20Phones%20with%20Plans', 'Smartphone e Telefoni');
-      $this->createCompaniesForTaxon('All%20Tablets', 'Tablet e Computer');
-      $this->createCompaniesForTaxon('All%20Laptops', 'Tablet e Computer');
-      $this->createCompaniesForTaxon('Wireless%20Routers', 'Modem e Networking');
-      $this->createCompaniesForTaxon('4K%20Ultra%20HD%20TVs', 'TV e Smart Living');
-      $this->createCompaniesForTaxon('Curved%20TVs', 'TV e Smart Living');
+      $this->createCompaniesForTaxon('All%20Cell%20Phones%20with%20Plans', 'Smartphone and Mobile');
+      $this->createCompaniesForTaxon('All%20Tablets', 'Tablet and Computer');
+      $this->createCompaniesForTaxon('All%20Laptops', 'Tablet and Computer');
+      $this->createCompaniesForTaxon('Wireless%20Routers', 'Modem and Networking');
+      $this->createCompaniesForTaxon('4K%20Ultra%20HD%20TVs', 'TV and Smart Living');
+      $this->createCompaniesForTaxon('Curved%20TVs', 'TV and Smart Living');
       $this->createCompaniesForTaxon('All%20Laptops', 'Outlet');
 
     }

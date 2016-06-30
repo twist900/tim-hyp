@@ -13,7 +13,7 @@ class AssistanceServicesTableSeeder extends Seeder
     {
         // App\AssistanceService::truncate();
 
-        $serviceTaxon = App\Taxon::where('name', 'Gestione linea e servizi')->first();
+        $serviceTaxon = App\Taxon::where('name', 'Connection management and services')->first();
 
         $service = new App\AssistanceService([
           'name' => 'Home line activation',
@@ -63,7 +63,7 @@ class AssistanceServicesTableSeeder extends Seeder
 
 
 
-      $serviceTaxon = App\Taxon::where('name', 'Controlla costi e pagamenti')->first();
+      $serviceTaxon = App\Taxon::where('name', 'Cost and payment control')->first();
 
       $service = new App\AssistanceService([
         'name' => "How to read home line's invoice",
@@ -101,7 +101,7 @@ class AssistanceServicesTableSeeder extends Seeder
       $serviceTaxon->assistanceServices()->save($service);
 
 
-      $serviceTaxon = App\Taxon::where('name', 'Supporto tecnico e configurazione')->first();
+      $serviceTaxon = App\Taxon::where('name', 'Hardware and configuration support')->first();
 
       $service = new App\AssistanceService([
         'name' => "Specialized tecnichal support with SOSsmartphone",

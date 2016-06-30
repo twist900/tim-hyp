@@ -21,12 +21,12 @@ class DevicesTableSeeder extends Seeder
 
         DB::table('devices')->truncate();
 
-        $this->createDevicesForTaxon('All%20Cell%20Phones%20with%20Plans', 'Smartphone e Telefoni');
-        $this->createDevicesForTaxon('All%20Tablets', 'Tablet e Computer');
-        $this->createDevicesForTaxon('All%20Laptops', 'Tablet e Computer');
-        $this->createDevicesForTaxon('Wireless%20Routers', 'Modem e Networking');
-        $this->createDevicesForTaxon('4K%20Ultra%20HD%20TVs', 'TV e Smart Living');
-        $this->createDevicesForTaxon('Curved%20TVs', 'TV e Smart Living');
+        $this->createDevicesForTaxon('All%20Cell%20Phones%20with%20Plans', 'Smartphone and Mobile');
+        $this->createDevicesForTaxon('All%20Tablets', 'Tablet and Computer');
+        $this->createDevicesForTaxon('All%20Laptops', 'Tablet and Computer');
+        $this->createDevicesForTaxon('Wireless%20Routers', 'Modem and Networking');
+        $this->createDevicesForTaxon('4K%20Ultra%20HD%20TVs', 'TV and Smart Living');
+        $this->createDevicesForTaxon('Curved%20TVs', 'TV and Smart Living');
         $this->createDevicesForTaxon('All%20Laptops', 'Outlet');
 
 

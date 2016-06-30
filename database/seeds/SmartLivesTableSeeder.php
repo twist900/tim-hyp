@@ -63,7 +63,7 @@ Read newspapers from early morning. </p>"
 
         //Salute e benessere
 
-        $smartLifeTaxon = App\Taxon::where('name', 'Salute e benessere')->first();
+        $smartLifeTaxon = App\Taxon::where('name', 'Health and wellness')->first();
 
         $smartLife = new App\SmartLifeService([
           'name' => 'Health and Wellness',
@@ -72,9 +72,9 @@ Read newspapers from early morning. </p>"
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
-        // Casa e Famiglia
+        // Home and Family
 
-        $smartLifeTaxon = App\Taxon::where('name', 'Casa e Famiglia')->first();
+        $smartLifeTaxon = App\Taxon::where('name', 'Home and Family')->first();
 
         $smartLife = new App\SmartLifeService([
           'name' => 'TIMTag',
@@ -101,9 +101,9 @@ Follow its movement on your smartphone, never loosing it again./p>"
 
         $smartLifeTaxon->smartLifeServices()->save($smartLife);
 
-        //Servizi alla persona
+        //Personal services
 
-        $smartLifeTaxon = App\Taxon::where('name', 'Servizi alla persona')->first();
+        $smartLifeTaxon = App\Taxon::where('name', 'Personal services')->first();
 
         $smartLife = new App\SmartLifeService([
           'name' => 'Payments',

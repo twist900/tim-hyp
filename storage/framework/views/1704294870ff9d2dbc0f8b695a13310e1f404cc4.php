@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Home | E-Shopper</title>
+<title>TIM</title>
 
 <?php if(App::environment('local')): ?>
   <link rel="stylesheet" href="<?php echo e(URL::asset('css/bootstrap.min.css', array(),true)); ?>" >
@@ -30,4 +30,4 @@
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
 <![endif]-->
-<link rel="shortcut icon" href="<?php echo URL::asset('images/ico/favicon.ico'); ?>">
+<link rel="shortcut icon" href="<?php echo URL::asset('favicon.ico'); ?>">

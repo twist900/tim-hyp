@@ -3,9 +3,9 @@
 
   <?php if ( ! ($taxon->parent == null)): ?>
 
-    <?php if($taxon->parent->name == "Prodotti"): ?>
+    <?php if($taxon->parent->name == "Products"): ?>
       <?php echo $__env->make('taxon._device_taxon', ['taxon' => $taxon, 'devices' => $devices], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-    <?php elseif($taxon->parent->name == "Assistenza"): ?>
+    <?php elseif($taxon->parent->name == "Assistance"): ?>
       <?php echo $__env->make('taxon._assistance_service_taxon', ['taxon' => $taxon, 'assistanceServices' => $assistanceServices], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <?php elseif($taxon->parent->name == "Smart Life"): ?>
       <?php echo $__env->make('taxon._smart_life_taxon', ['taxon' => $taxon, 'smartLifeServices' => $smartLifeServices ], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

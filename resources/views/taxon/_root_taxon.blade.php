@@ -10,13 +10,13 @@
 
       @include('shared._smart_life_service_list', ['taxon' => $childTaxon])
     @endif
-  @elseif($taxon->name == 'Assistenza')
+  @elseif($taxon->name == 'Assistance')
     @if($childTaxon->assistanceServices->count() > 0)
       <h3>{{ $childTaxon->name }}</h3>
 
       @include('shared._assistance_service_list', ['taxon' => $childTaxon])
     @endif
-  @elseif($taxon->name == 'Prodotti')
+  @elseif($taxon->name == 'Products')
     @if($childTaxon->devices->count() > 0)
      <div class="taxon-title">
           <img class="taxon-title-image"  src="{{ $childTaxon->icon->url('thumb') }}">

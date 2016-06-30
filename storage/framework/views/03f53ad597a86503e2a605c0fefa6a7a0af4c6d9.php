@@ -16,7 +16,7 @@
 
       <?php echo $__env->make('shared._assistance_service_list', ['taxon' => $childTaxon], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <?php endif; ?>
-  <?php elseif($taxon->name == 'Prodotti'): ?>
+  <?php elseif($taxon->name == 'Products'): ?>
     <?php if($childTaxon->devices->count() > 0): ?>
      <div class="taxon-title">
           <img class="taxon-title-image"  src="<?php echo e($childTaxon->icon->url('thumb')); ?>">

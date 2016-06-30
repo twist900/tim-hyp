@@ -13,7 +13,7 @@ class FaqsTableSeeder extends Seeder
     {
         DB::table('faqs')->truncate();
 
-        $service = App\Service::where('name', 'Trasloco')->first();
+        $service = App\Service::where('name', 'Line moving')->first();
 
         $faq = new App\Faq([
           "title" => "What is line moving?",
@@ -52,7 +52,7 @@ class FaqsTableSeeder extends Seeder
         $service->faqs()->save($faq);
 
 
-        $service = App\Service::where('name', "All'estero con TIM")->first();
+        $service = App\Service::where('name', "Abroad with TIM")->first();
 
         $faq = new App\Faq([
           "title" => "I'm abroad with my prepaid line, what I have to do to make phone calls?",
@@ -84,7 +84,7 @@ class FaqsTableSeeder extends Seeder
         $service->faqs()->save($faq);
 
 
-        $service = App\Service::where('name', "Come leggere la fattura della linea fissa")->first();
+        $service = App\Service::where('name', "How to read home line's invoice")->first();
 
         $faq = new App\Faq([
           "title" => "How to read the home line invoice?",
