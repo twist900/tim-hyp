@@ -16,40 +16,37 @@ class FaqsTableSeeder extends Seeder
         $service = App\Service::where('name', 'Trasloco')->first();
 
         $faq = new App\Faq([
-          "title" => "Cos'è il trasloco di una linea telefonica?",
-          "content" => "Il trasloco ti permette di trasferire la tua linea telefonica presso una nuova abitazione, nella stessa città o in una città diversa."
+          "title" => "What is line moving?",
+          "content" => "Line moving permits to transfer your line to a new home, in the same or a different city."
           ]);
 
         $service->faqs()->save($faq);
 
         $faq = new App\Faq([
-          "title" => "Posso mantenere il mio numero telefonico?",
-          "content" => "Se la nuova abitazione si trova nello stesso distretto telefonico di quella di origine, salvo problemi tecnici, sarà possibile mantenere il vecchio numero telefonico. Fino al momento dell’attivazione della linea nella tua
-            nuova abitazione potrai continuare ad utilizzare la linea telefonica nella tua vecchia abitazione."
+          "title" => "Can I keep my telephone number?",
+          "content" => "If the new home is located in the same phone district of the old one, it will be possible to keep the old number. Until the line in the new home is activated, you can keep using the old line."
           ]);
 
         $service->faqs()->save($faq);
 
         $faq = new App\Faq([
-          "title" => "Come posso richiederlo?",
-          "content" => "Puoi gestire la tua richiesta di trasloco direttamente da questo sito oppure chiamando il Servizio Clienti 187. Per inviare la richiesta via web devi essere registrato all'Area Clienti."
+          "title" => "How can I request for line moving?",
+          "content" => "You can manage your moving request directly from this web site or calling the Customer Service 187. To send the request you must be registered to Clients Area."
           ]);
 
         $service->faqs()->save($faq);
 
         $faq = new App\Faq([
-          "title" => "Quali sono i tempi?",
-          "content" => "Il trasloco viene effettuato di norma entro 10 giorni lavorativi dalla richiesta. Tuttavia, nel caso in cui TIM riscontri la necessità di realizzare lavori aggiuntivi per il completamento del trasloco, essi saranno completamente a tuo carico . Se il trasloco avvenisse in un periodo superiore ai 10 giorni normalmente previsti, il Servizio Clienti ti fornirà tempestiva comunicazione della causa del ritardo, fornendoti indicazioni quanto più precise possibili sulla tempistica prevista. Se i tempi di completamento superano i 60 giorni dalla data di acquisizione della tua richiesta, in alternativa, potrai richiede la cessazione della tua vecchia linea e l’attivazione di una nuova linea presso la nuova abitazione, secondo le “ procedure eccezionali” descritte nel paragrafo successivo."
+          "title" => "How much time will it take?",
+          "content" => "Moving usually takes 10 working days from the request. However, in the case TIM find out it needs extra works to complete the line moving, those will be at client's charge."
           ]);
 
         $service->faqs()->save($faq);
 
 
         $faq = new App\Faq([
-          "title" => "Quanto costa il trasloco?",
-          "content" => "Il contributo da versare per il trasloco della linea telefonica è di 73,20 € (IVA al 22% inclusa).
-            La fatturazione del canone e dei servizi telefonici attivi presso la tua vecchia abitazione proseguirà fino
-            all’attivazione della linea presso la nuova abitazione da te indicata."
+          "title" => "What is the price for line moving?",
+          "content" => "The price for the moving is 73,20 €. Charges on your old house will continue until the new line is activated."
           ]);
 
         $service->faqs()->save($faq);
@@ -58,32 +55,30 @@ class FaqsTableSeeder extends Seeder
         $service = App\Service::where('name', "All'estero con TIM")->first();
 
         $faq = new App\Faq([
-          "title" => "Sono all’estero con la mia linea ricaricabile, cosa devo fare per chiamare?",
-          "content" => "Tutti i clienti TIM con una ricaricabile sono abilitati a chiamare e ricevere telefonate all'estero."
+          "title" => "I'm abroad with my prepaid line, what I have to do to make phone calls?",
+          "content" => "Every TIM prepaid client can automatically send and receive calls from abroad."
           ]);
 
         $service->faqs()->save($faq);
 
         $faq = new App\Faq([
-          "title" => "Come faccio ad addebitare i costi delle chiamate sul credito residuo della mia linea ricaricabile?",
-          "content" => "Con la tua ricaricabile TIM potrai effettuare le tue telefonate,utilizzando il servizio di Chiamata Diretta dalle reti dei paesi in cui è disponibile. Ti basterà selezionare i numeri (di rete fissa o mobile italiana) dalla rubrica, o comporli direttamente, anche senza prefisso internazionale italiano +39.
-            Se invece ti trovi con la tua ricaricabile TIM in un paese in cui il servizio Chiamata Diretta non è disponibile,
-            potrai comunque provare ad utilizzare il servizio di Chiamata con modalità *101* a seconda degli accordi stabiliti con
-            l’operatore estero e dei servizi supportati."
+          "title" => "How can i charge calls from abroad on my prepaid credit?",
+          "content" => "With your TIM prepaid sim card you can make calls using the Direct Call service in the countries where the service is available.
+          If instead the service is not available, you can try use the Call service with mode *101* depending on the agreements with the foreign telephone company and on supported services."
           ]);
 
         $service->faqs()->save($faq);
 
         $faq = new App\Faq([
-          "title" => "Come posso addebitare su carta di credito le chiamate della mia linea ricaricabile?",
-          "content" => "Se vuoi utilizzare la tua ricaricabile TIM in tutto il Mondo indipendentemente dalla modalità di chiamata disponibile nel paese in cui ti rechi e senza la preoccupazione di esaurire il credito, attiva l’addebito delle chiamate e degli SMS all’estero su una tua carta di credito convenzionata (roaming domiciliato).Per chiamare ti basterà comporre i numeri di telefono aggiungendo il prefisso internazionale del paese che vuoi chiamare.Ad esempio per chiamare il numero italiano 335000000 dovrai comporre: +39335000000."
+          "title" => "How can I charge on credit card calls from my prepaid line?",
+          "content" => "If you want to use your prepaid TIM all over the world independently from the available calls mode in the country you are and without being worry to finish your credit, activate credit card charge of calls and SMS from abroad. To call you will just need to type the telephone numbers adding international prefix of the county you want to call."
           ]);
 
         $service->faqs()->save($faq);
 
         $faq = new App\Faq([
-          "title" => "Come posso addebitare su carta di credito le chiamate della mia linea ricaricabile?",
-          "content" => "Tutti i clienti TIM con un abbonamento sono automaticamente abilitati a chiamare, ricevere telefonate, inviare e ricevere SMS dall’estero con gli operatori che offrono il servizio di roaming. Usare il telefonino all’estero è facilissimo!"
+          "title" => "How can i call and text abroad from my contract line?",
+          "content" => "All TIM's contract clients are automatically enabled to make and receive calls, send and receive SMS with every company offering the roaming service. Using your phone abroad has never been easier!"
           ]);
 
         $service->faqs()->save($faq);
@@ -92,22 +87,22 @@ class FaqsTableSeeder extends Seeder
         $service = App\Service::where('name', "Come leggere la fattura della linea fissa")->first();
 
         $faq = new App\Faq([
-          "title" => "Come leggo la fattura della linea fissa?",
-          "content" => "<p>Nella prima pagina trovi:</p><ul><li>i dati principali dell’intestatario della linea di casa e della fattura</li><li>il riepilogo degli abbonamenti attivi&nbsp;</li><li>un box informativo con le proposte commerciali personalizzate relative a&nbsp; offerte, prodotti, servizi&nbsp;</li><li>l’informazione sulla modalità di pagamento (bollettino, addebito su conto corrente o su carta di credito)</li><li>lo stato dei pagamenti</li><li>una guida veloce che riporta, attraverso semplici icone, i riferimenti per entrare in contatto con TIM:&nbsp;<a >App MyTIM Fisso</a>&nbsp;per Smartphone e Tablet, sito www.tim.it (registrandoti alla sezione&nbsp;<a >MyTIM Fisso</a>), Social Network (Facebook, Youtube, Twitter, Google+), Servizio clienti 187, Negozi TIM.</li></ul><p>Nella pagina del “Dettaglio dei costi” &nbsp;le voci sono riordinate secondo una logica più vicina alle tue esigenze: &nbsp;</p><ul><li>prima trovi gli eventuali “<strong>Importi Una Tantum</strong>” cioè quelli straordinari da pagare una sola volta,&nbsp;</li><li>poi gli “<strong>Abbonamenti</strong>” (canoni delle offerte/prodotti/servizi attivi),&nbsp;</li><li>segue la descrizione “<strong>Telefonate e contenuti</strong>” (consumi di traffico, sms, contenuti digitali come video on demand, ebook, ecc)&nbsp;</li><li>ed infine la voce “<strong>Altri importi</strong>” (spese di produzione e spedizione fatture, le rate dei prodotti, le indennità di ritardato pagamento, interessi legali e moratori, consegna elenchi telefonici).</li></ul>"
+          "title" => "How to read the home line invoice?",
+          "content" => "<p>In the first page you will find:</p><ul><li>home line's owner personal data</li><li>an overview of the activated contracts&nbsp;</li><li>an informative box with personalized commercial proposals relative to&nbsp; offers, products, services&nbsp;</li><li>information on payment method</li><li>payments status</li><li>a fast guide presenting, trough simple icons, information to get in contact with TIM:&nbsp;MyTIM Fisso App&nbsp;for Smartphone and Tablet, www.tim.it website, Social Network (Facebook, Youtube, Twitter, Google+), Customer Care 187, TIM Stores.</li></ul><p>In the Cost Detail page entries are arranged in a logic closer to your needs: &nbsp;</p><ul><li>fist you will find “<strong>Una Tantum Costs</strong>”,&nbsp;</li><li>then “<strong>Contracts</strong>”,&nbsp;</li><li>followed by the description “<strong>phone calls and contents</strong>” &nbsp;</li><li>and at the end the voice “<strong>Other Costs</strong>” .</li></ul>"
           ]);
 
         $service->faqs()->save($faq);
 
         $faq = new App\Faq([
-          "title" => "Che vantaggi ho con la fattura online?",
-          "content" => "<p><spa>Con la fattura online puoi:</span></p><ul><li><span>avere&nbsp;chiarimenti sul significato delle voci in fattura</span></li><li ><span>visualizzare il dettaglio di tutte le tue telefonate ed analizzarle utilizzando i filtri per tipo di chiamata, offerta, data, numero chiamato, fascia oraria, durata e costo;</span></li><li><span><b>inviare segnalazioni al Servizio Clienti</b>&nbsp;(ad es. segnalazione di errato addebito del traffico, richiesta di abilitazione di un servizio, ecc.) ottenendo la risposta in tempi brevi.</span></li><li ><span>inviare la fattura sulla tua casella emai</span></li><li><span>visualizzare e scaricare in formato excel i grafici del tuo traffico</span></li></ul>"
+          "title" => "What are the advantages of online invoice?",
+          "content" => "<p><spa>With online invoice you can:</span></p><ul><li><span>having clarifications of the meaning of the various parts of the invoice</span></li><li ><span>visualize call details and analyzing them by filtering by call type, offer, date, called number, time slot, duration and cost;</span></li><li><span><b>send requests to Customer Care</b>&nbsp; getting an answer in short time.</span></li><li ><span>send the invoice at your email address</span></li><li><span>visualize and download in excel format graphs about your traffic</span></li></ul>"
           ]);
 
         $service->faqs()->save($faq);
 
         $faq = new App\Faq([
-          "title" => "Vorrei cambiare l’indirizzo e-mail su cui ricevere il messaggio della disponibilità online della mia fattura. Come posso fare?",
-          "content" => "Accedi con la tua username e password nella sezione “MyTIM Fisso” →  'Il mio profilo' → 'Gestione Profilo' e quindi clicca su “Gestione email” che si trova sulla stessa riga della voce 'Email': qui potrai modificare l’indirizzo e-mail su cui ricevere il messaggio della disponibilità online della tua fattura, inserendone uno nuovo o selezionando come principale uno di quelli già presenti"
+          "title" => "I want to change the email address for receiving the available online invoce alert. How can I do it?",
+          "content" => "Access with your username and password in the section “MyTIM Fisso” →  'My profile' → 'Manage profile' then click on “Manage email”: here you will be able to modify the existing email address, inserting a new email address or selecting from the already available addresses"
           ]);
 
         $service->faqs()->save($faq);
