@@ -1,27 +1,23 @@
-# Laravel PHP Framework
+#TIM Website - https://tim-hyp.herokuapp.com/
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+##University Project
+This is the GitHub repository for the TIM website project built within the HYPERMEDIA APPLICATIONS course at Politecnico di Milano University.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Developed by:
+- Georgy Shabunin
+- Gabriele Maddalena
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+##Techs
 
-## Official Documentation
+###Web Application
+This application is built with **[Laravel](http://laravel.com/)**, an open source PHP Framework, which provides tools needed for developing robust web apps. The developed application benefits from IOC container, expressive migration system, database seeding mechanism, ORM, MVC architecture and many other features of the framework, while enjoying its preference for "Convention over Configuration" paradigm.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+**Bootstrap** and **JQuery** were used to design intuitive and responsive frontend user experience.
 
-## Contributing
+The application is running on **Heroku**. As a PaaS, Heroku provides easy setup. Moreover, it uses Git version control system to deploy apps.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+The entire storage infrastructure is offloaded to **AWS S3**, which is used for reliable storage and upload of static assets(images, css and js).
 
-## Security Vulnerabilities
+###Mobile Application
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Mobile application was developed with **Phonegap**, which allows the web application to run in a webview and interact with native API on mobile device. **Phonegap Build** web service was used for rapid application deployment, starting from [github repository](https://github.com/twist900/tim-hyp-mobile).
