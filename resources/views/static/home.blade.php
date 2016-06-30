@@ -43,7 +43,7 @@
            <h1>Need help?</h1>
            <hr>
 
-          <a href="{{ action('TaxonController@show', ['id' => App\Taxon::where('name', 'Assistenza')->first()->id]) }}" class="btn btn-primary btn-xl page-scroll">LET US ASSIST YOU</a>
+          <a href="{{ action('TaxonController@show', ['id' => App\Taxon::where('name', 'Assistance')->first()->id]) }}" class="btn btn-primary btn-xl page-scroll">LET US ASSIST YOU</a>
        </div>
      </div>
    </section>
