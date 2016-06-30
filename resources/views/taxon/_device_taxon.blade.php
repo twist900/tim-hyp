@@ -1,7 +1,7 @@
 @extends('layouts.application')
-
-
 @section('content')
+<div class="container">
+
   <section id="slider"><!--slider-->
     <div class="container">
       <div class="row">
@@ -87,4 +87,6 @@
       </div>
     </div>
   </section>
+
+  <div class="container">
 @stop

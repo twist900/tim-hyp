@@ -1,6 +1,6 @@
 @extends('layouts.application')
 @section('content')
-<div class="container">
+
 
   @unless($taxon->parent == null)
 
@@ -16,5 +16,4 @@
     @include('taxon._root_taxon', ['taxon' => $taxon])
   @endunless
 
-</div>
 @stop

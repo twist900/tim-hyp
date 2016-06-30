@@ -1,4 +1,6 @@
 <?php $__env->startSection('content'); ?>
+<div class="container">
+
   <section id="slider"><!--slider-->
     <div class="container">
       <div class="row">
@@ -85,5 +87,7 @@
       </div>
     </div>
   </section>
+
+  <div class="container">
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.application', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

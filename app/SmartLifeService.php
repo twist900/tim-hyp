@@ -13,7 +13,7 @@ class SmartLifeService extends Service
       'type' => 'SmartLifeService'
     );
 
-    protected static function boot()
+    public static function boot()
     {
         parent::boot();
 

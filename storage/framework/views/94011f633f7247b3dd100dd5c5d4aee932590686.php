@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?>
-<div class="container">
+
 
   <?php if ( ! ($taxon->parent == null)): ?>
 
@@ -15,6 +15,5 @@
     <?php echo $__env->make('taxon._root_taxon', ['taxon' => $taxon], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   <?php endif; ?>
 
-</div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.application', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

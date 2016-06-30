@@ -15,7 +15,9 @@ class AssistanceService extends Service
       'type' => 'AssistanceService'
     );
 
-    protected static function boot()
+
+
+    public static function boot()
     {
         parent::boot();
 
