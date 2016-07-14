@@ -23,25 +23,29 @@
           <p><b>Condition:</b> New</p>
           <p><b>Brand:</b> <?php echo e($device->company->name); ?></p>
 
-        <h3>Related Smart Life Services:</h3>
-        <ul class="list-group">
-          <?php foreach($device->smartLifeServices as $smartLifeService): ?>
-            <li class="list-group-item">
-               <?php echo HTML::linkAction('SmartLifeServiceController@show', $smartLifeService->name,  $smartLifeService->id, []); ?>
+        <?php if ( ! ($device->smartLifeServices->isEmpty())): ?>
+          <h3>Related Smart Life Services:</h3>
+          <ul class="list-group">
+            <?php foreach($device->smartLifeServices as $smartLifeService): ?>
+              <li class="list-group-item">
+                 <?php echo HTML::linkAction('SmartLifeServiceController@show', $smartLifeService->name,  $smartLifeService->id, []); ?>
 
-             </li>
-          <?php endforeach; ?>
-        </ul>
+               </li>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
 
-        <h3>Related Assistance Services:</h3>
-        <ul class="list-group">
-          <?php foreach($device->assistanceServices as $assistanceService): ?>
-            <li class="list-group-item">
-               <?php echo HTML::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []); ?>
+        <?php if ( ! ($device->assistanceServices->isEmpty())): ?>
+          <h3>Related Assistance Services:</h3>
+          <ul class="list-group">
+            <?php foreach($device->assistanceServices as $assistanceService): ?>
+              <li class="list-group-item">
+                 <?php echo HTML::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []); ?>
 
-             </li>
-          <?php endforeach; ?>
-        </ul>
+               </li>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
       </div><!--/product-information-->
 
     </div><!--/product-details-->

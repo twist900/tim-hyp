@@ -26,23 +26,27 @@
           <p><b>Condition:</b> New</p>
           <p><b>Brand:</b> {{ $device->company->name }}</p>
 
-        <h3>Related Smart Life Services:</h3>
-        <ul class="list-group">
-          @foreach($device->smartLifeServices as $smartLifeService)
-            <li class="list-group-item">
-               {!! HTML::linkAction('SmartLifeServiceController@show', $smartLifeService->name,  $smartLifeService->id, []) !!}
-             </li>
-          @endforeach
-        </ul>
+        @unless($device->smartLifeServices->isEmpty())
+          <h3>Related Smart Life Services:</h3>
+          <ul class="list-group">
+            @foreach($device->smartLifeServices as $smartLifeService)
+              <li class="list-group-item">
+                 {!! HTML::linkAction('SmartLifeServiceController@show', $smartLifeService->name,  $smartLifeService->id, []) !!}
+               </li>
+            @endforeach
+          </ul>
+        @endunless
 
-        <h3>Related Assistance Services:</h3>
-        <ul class="list-group">
-          @foreach($device->assistanceServices as $assistanceService)
-            <li class="list-group-item">
-               {!! HTML::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []) !!}
-             </li>
-          @endforeach
-        </ul>
+        @unless($device->assistanceServices->isEmpty())
+          <h3>Related Assistance Services:</h3>
+          <ul class="list-group">
+            @foreach($device->assistanceServices as $assistanceService)
+              <li class="list-group-item">
+                 {!! HTML::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []) !!}
+               </li>
+            @endforeach
+          </ul>
+        @endunless
       </div><!--/product-information-->
 
     </div><!--/product-details-->
