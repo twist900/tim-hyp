@@ -1,9 +1,10 @@
-/vendor
-/node_modules
-/public/storage
-Homestead.yaml
-Homestead.json
+/WEBSITE/vendor
+/WEBSITE/node_modules
+/WEBSITE/public/storage
+/WEBSITE/Homestead.yaml
+/WEBSITE/Homestead.json
 .env
+/WEBSITE/public/system
 /public/system
-/storage/framework/views/*
+/WEBSITE/storage/framework/views/*
 .DS_Store
