@@ -81,6 +81,8 @@
             @foreach( $devices as $device )
               @include('shared._device', ['device' => $device])
             @endforeach
+
+            {!! $devices->render() !!}
           </div><!--features_items-->
 
         </div>

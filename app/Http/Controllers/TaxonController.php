@@ -46,10 +46,10 @@ class TaxonController extends Controller
         $compId = Input::get('company');
 
         if(isset($compId)){
-            $devices = $taxon->devices()->where('company_id', $compId)->get();
+            $devices = $taxon->devices()->where('company_id', $compId)->paginate(12);
         }
         else{
-            $devices = $taxon->devices;
+            $devices = $taxon->devices()->paginate(12);
         }
         return $devices;
     }
