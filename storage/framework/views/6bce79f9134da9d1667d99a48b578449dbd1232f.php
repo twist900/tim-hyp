@@ -22,9 +22,31 @@
           <p><b>Availability:</b> In Stock</p>
           <p><b>Condition:</b> New</p>
           <p><b>Brand:</b> <?php echo e($device->company->name); ?></p>
-        </div><!--/product-information-->
-      </div>
+
+        <h3>Related Smart Life Services:</h3>
+        <ul class="list-group">
+          <?php foreach($device->smartLifeServices as $smartLifeService): ?>
+            <li class="list-group-item">
+               <?php echo HTML::linkAction('SmartLifeServiceController@show', $smartLifeService->name,  $smartLifeService->id, []); ?>
+
+             </li>
+          <?php endforeach; ?>
+        </ul>
+
+        <h3>Related Assistance Services:</h3>
+        <ul class="list-group">
+          <?php foreach($device->assistanceServices as $assistanceService): ?>
+            <li class="list-group-item">
+               <?php echo HTML::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []); ?>
+
+             </li>
+          <?php endforeach; ?>
+        </ul>
+      </div><!--/product-information-->
+
     </div><!--/product-details-->
+
+
 
     <div class="category-tab shop-details-tab"><!--category-tab-->
       <div class="col-sm-12">
@@ -62,6 +84,7 @@
     </div><!--/category-tab-->
 
   </div>
+</div>
 </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.application', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -30,9 +30,11 @@ class AssistanceServiceController extends Controller
         $service = AssistanceService::find($id);
         $service->hit();
 
+        $relatedDevices = $service->devices()->paginate(6);
+
         $faqs = $service->faqs;
 
-        return view('service.show', ['service' => $service, 'faqs' => $faqs]);
+        return view('service.show', ['service' => $service, 'relatedDevices' => $relatedDevices, 'faqs' => $faqs]);
         //
     }
 

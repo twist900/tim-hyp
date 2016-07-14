@@ -20,6 +20,17 @@ class Device extends Model
         return $this->belongsToMany('App\Property')->withPivot('value');
      }
 
+     public function assistanceServices()
+     {
+        return $this->belongsToMany('App\AssistanceService',  'device_service', 'service_id', 'device_id');
+
+     }
+
+     public function smartLifeServices()
+     {
+        return $this->belongsToMany('App\SmartLifeService',  'device_service', 'service_id', 'device_id');
+     }
+
      public function taxons()
      {
         return $this->belongsToMany('App\Taxon');

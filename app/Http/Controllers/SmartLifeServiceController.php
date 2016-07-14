@@ -29,7 +29,8 @@ class SmartLifeServiceController extends Controller
     public function show($id)
     {
         $smartLifeService = SmartLifeService::find($id);
-        return view('smart_life.show', ['smartLifeService' => $smartLifeService]);
+        $relatedDevices = $smartLifeService->devices()->paginate(6);
+        return view('smart_life.show', ['smartLifeService' => $smartLifeService,  'relatedDevices' =>  $relatedDevices]);
         //
     }
 }
