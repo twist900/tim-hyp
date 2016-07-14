@@ -48,7 +48,7 @@ class DevicesTableSeeder extends Seeder
           $company->devices()->save($device);
 
           $serviceCount = App\SmartLifeService::count();
-          foreach (App\SmartLifeService::skip(rand(0,$serviceCount))->take(rand(5,$serviceCount)->get() as $smartLifeService) {
+          foreach (App\SmartLifeService::skip(rand(0, $serviceCount))->take(rand(5,$serviceCount))->get() as $smartLifeService) {
             $smartLifeService->devices()->save($device);
           }
 
