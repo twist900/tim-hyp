@@ -25,9 +25,29 @@
           <p><b>Availability:</b> In Stock</p>
           <p><b>Condition:</b> New</p>
           <p><b>Brand:</b> {{ $device->company->name }}</p>
-        </div><!--/product-information-->
-      </div>
+
+        <h3>Related Smart Life Services:</h3>
+        <ul class="list-group">
+          @foreach($device->smartLifeServices as $smartLifeService)
+            <li class="list-group-item">
+               {!! HTML::linkAction('SmartLifeServiceController@show', $smartLifeService->name,  $smartLifeService->id, []) !!}
+             </li>
+          @endforeach
+        </ul>
+
+        <h3>Related Assistance Services:</h3>
+        <ul class="list-group">
+          @foreach($device->assistanceServices as $assistanceService)
+            <li class="list-group-item">
+               {!! HTML::linkAction('AssistanceServiceController@show', $assistanceService->name,  $assistanceService->id, []) !!}
+             </li>
+          @endforeach
+        </ul>
+      </div><!--/product-information-->
+
     </div><!--/product-details-->
+
+
 
     <div class="category-tab shop-details-tab"><!--category-tab-->
       <div class="col-sm-12">
@@ -65,5 +85,6 @@
     </div><!--/category-tab-->
 
   </div>
+</div>
 </div>
 @stop

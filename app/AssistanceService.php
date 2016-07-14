@@ -26,4 +26,8 @@ class AssistanceService extends Service
         });
     }
 
+    public function devices()
+    {
+      return $this->belongsToMany('App\Device',  'device_service', 'device_id', 'service_id');
+    }
 }

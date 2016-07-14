@@ -46,6 +46,17 @@ class DevicesTableSeeder extends Seeder
           $device->save();
           $dbTaxonModel->devices()->save($device);
           $company->devices()->save($device);
+
+          $serviceCount = App\SmartLifeService::count();
+          foreach (App\SmartLifeService::skip(rand(0,$serviceCount))->take(rand(5,$serviceCount)->get() as $smartLifeService) {
+            $smartLifeService->devices()->save($device);
+          }
+
+          $serviceCount = App\AssistanceService::count();
+          foreach (App\AssistanceService::skip(rand(0,$serviceCount))->take(rand(5,$serviceCount))->get() as $assistanceService) {
+            $assistanceService->devices()->save($device);
+          }
+
           foreach( $product->details as $detail){
             $detailModel =  App\Property::firstOrCreate(['name' => $detail->name]);
             $detailModel->devices()->save($device, ['value' => $detail->value ]);
