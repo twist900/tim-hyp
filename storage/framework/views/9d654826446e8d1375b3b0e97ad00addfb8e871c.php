@@ -81,6 +81,9 @@
             <?php foreach( $devices as $device ): ?>
               <?php echo $__env->make('shared._device', ['device' => $device], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
             <?php endforeach; ?>
+
+            <?php echo $devices->render(); ?>
+
           </div><!--features_items-->
 
         </div>
